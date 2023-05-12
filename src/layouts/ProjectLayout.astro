@@ -1,0 +1,60 @@
+---
+export interface Props {
+	title: string;
+}
+
+import MainLayout from "../layouts/MainLayout.astro";
+import "../styles/project.css";
+
+const { title } = Astro.props;
+
+---
+
+<MainLayout title={title}>
+	<script>
+		function pickimg(imgs) {
+			var expandImg = document.getElementById(
+				"expandedImg"
+			) as HTMLImageElement;
+			var lightboximg = document.getElementById(
+				"lightboximg"
+			) as HTMLDivElement;
+			var imgText = document.getElementById("imgtext") as HTMLElement;
+
+			expandImg.src = imgs.src;
+			lightboximg.style.backgroundImage = `url(${imgs.src})`;
+			imgText.innerHTML = imgs.alt;
+		}
+
+		document.addEventListener("DOMContentLoaded", function () {
+			var thumbs = document.querySelectorAll(".thumb");
+			thumbs.forEach(function (thumb) {
+				thumb.addEventListener("click", function () {
+					pickimg(thumb);
+				});
+			});
+		});
+	</script>
+
+	<!-- The four columns -->
+		
+	<slot name="gallery"/>
+
+	<div class="description">
+		
+			
+			<slot name="product-text"/>
+
+	
+	</div>
+
+	<a href="#" class="lightbox" id="img1">
+
+		<slot name="lightboximg"/>
+		<div
+			id="lightboximg"
+			style="background-image: url('./images/chair_nn_1.jpg')"
+		>
+		</div>
+	</a>
+</MainLayout>

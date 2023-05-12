@@ -1,0 +1,276 @@
+@font-face {
+   font-family: 'Compagnon Medium';
+   src: url('/fonts/Comp/Compagnon-Medium.eot') format('eot'),
+        url('/fonts/Comp/Compagnon-Medium.woff') format('woff'),
+        url('/fonts/Comp/Compagnon-Medium.woff2') format('woff2');
+   font-weight: medium;
+   font-style: medium;
+ }
+
+@font-face {
+font-family: 'Compagnon Light';
+src: url('/fonts/Comp/Compagnon-Light.eot') format('eot'),
+       url('/fonts/Comp/Compagnon-Light.woff') format('woff'),
+       url('/fonts/Comp/Compagnon-Light.woff2') format('woff2');
+font-weight: light;
+font-style: light;
+}
+
+
+
+.description {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items:flex-start;
+   padding-top: 15px;
+   /* border: solid blue 3px; */
+ }
+
+ .active {
+  color: red;
+  font-weight: bold;
+}
+
+ .description-wrap {
+   display: flex;
+   flex-wrap: wrap;
+   /* flex-direction: column; */
+   justify-content: flex-start;
+   align-items:flex-start;
+   /* border: solid rgba(238, 231, 231, 0.754) 2px; */
+
+
+ }
+ 
+ .product-details {
+   flex: 1;
+   max-width: 500px;
+   min-width: 300px;
+   /* border: solid aquamarine; */
+
+   /* border-left: solid rgba(238, 231, 231, 0.754) 2px; */
+   overflow: hidden;
+
+
+
+ }
+
+ .wip {
+  font-family: 'Compagnon Light';
+  font-size: 2rem;
+  padding-top: 20px;
+ }
+
+ .product-details span {
+   font-family: 'Compagnon Light';
+   font-size: 1rem;
+   display: inline-block;
+   width: 100%;
+   padding-left: 0.5rem;
+   padding-top: 0.4rem;
+   vertical-align: text-bottom;
+   /* border: solid purple; */
+
+
+   /* border: solid purple; */
+ }
+ 
+ .why {
+   /* border-top: solid rgba(238, 231, 231, 0.754) 2px; */
+ }
+
+ .how {
+   /* border-top: solid rgba(238, 231, 231, 0.754) 2px; */
+ }
+
+ .product-details p {
+   font-family: 'Compagnon Medium';
+   font-size: 0.8rem;
+   line-height: 1rem;
+   /* border: solid royalblue; */
+   margin: 0.5rem;
+ }
+
+ .product-title {
+   flex: 0;
+   margin-right: 25px;
+   /* border: solid green 3px; */
+   width: min-content;
+   font-family: 'Compagnon Medium';
+   font-size: 4rem;
+   /* border: solid rgba(238, 231, 231, 0.754) 2px; */
+   height: min-content;
+   
+ }
+
+ .product-title p{
+   /* border: solid green; */
+   margin: 0;
+   line-height: 70%;
+   letter-spacing: -0.2rem;
+   /* vertical-align: text-top; */
+ }
+
+
+
+
+
+ .image-container {
+   display: flex;
+   justify-content:center;
+   width: 100%;
+   padding-top: 15px;
+   margin: 0;
+   height: 550px;
+   border: solid palegoldenrod;
+ }
+ 
+ .image-container img {
+   height: 550px;
+   margin: 0;
+   padding: 0;
+   max-width: 77px;
+   object-fit: cover;
+   transition: all 0.3s ease-in-out;
+ }
+ 
+ .image-container img:hover {
+   /* flex-basis: 50%; */
+   max-width: 50%;
+ }
+
+
+
+
+
+
+
+ * {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+}
+
+.gallery {
+  /* margin: 33px 77px; */
+  /* border: solid green; */
+  /* max-width: 1200px; */
+  height: min-content;
+  margin-bottom: 30px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  height: 75px;
+  padding-top: 5px;
+  /* border: solid purple; */
+}
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  padding: 0;
+  /* border: solid rebeccapurple; */
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8; 
+  cursor: pointer; 
+  object-fit: cover;
+  /* border: solid red; */
+  height: 100%;
+  
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container */
+.container {
+  position: relative;
+  height: 400px;
+  /* border: solid palevioletred; */
+  width: min-content;
+  margin: auto;
+  /* display: none; */
+}
+
+.container img {
+  height: 100%;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+ 
+ 
+.lightbox {
+  /* Default to hidden */
+  display: none;
+
+  /* Overlay entire screen */
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+  /* A bit of padding around image */
+  padding: 1em;
+
+  /* Translucent background */
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Unhide the lightbox when it's the target */
+.lightbox:target {
+  display: block;
+}
+
+.lightbox div {
+  /* Full width and height */
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  /* Size and position background image */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+
+
+
+
+

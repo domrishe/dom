@@ -1,0 +1,71 @@
+---
+import ProjectLayout from "../../layouts/ProjectLayout.astro";
+---
+
+<ProjectLayout title="DAYDREAM CHAIR">
+
+
+    <div class="gallery" slot="gallery">
+        <div class="container">
+            <!-- <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span> -->
+            <a href="#img1">
+                <img
+                    src="../../../media/lepta_1.gif"
+                    id="expandedImg"
+                />
+            </a>
+            <div id="imgtext"></div>
+        </div>
+    
+        <div class="row">
+            <div class="column">
+                <img
+                    src="../../../media/lepta_1.gif"
+                    alt=""
+                    style="width:100%"
+                    class="thumb"
+                />
+            </div>
+                <div class="column">
+                    <img
+                        src="../../../media/lepta_2.gif"
+                        alt=""
+                        style="width:100%"
+                        class="thumb"
+                    />
+                </div>
+
+
+        </div>
+    </div>
+        
+    
+
+
+
+
+    
+    <div class="description-wrap" slot="product-text">
+        <div class="product-title">
+            <p>LEPTA PROTOCOL</p>
+            <p class="wip">[WIP]</p>
+        </div>
+        <div class="product-details">
+            <span>WHAT</span>
+            <p>
+                A set of primitive smart contracts designed for small communities to pool their resources together and share according to their own rules.
+            </p>
+            <span class="why">WHY</span>
+            <p>
+                The "De" in "DeFi" shouldn't always mean "degenerate". There are many communities who could benefit from breaking free of institutional control over their finances, and who have no interest in trading on leverage or flipping NFTs - what most DeFi protocols seem to be focused on.
+            </p>
+            <span class="how">HOW</span>
+            <p>
+                The first smart contract is currently being tested on the Algorand blockchain - chosen for its low fees, speed, and easy developer experience (the high Tx fees on Ethereum, even on L2's, just don't align with the ethos of this project). 
+            </p>
+            <p>
+                The smart contract was written in PyTEAL, along with the Beaker framework and the newly released Algokit toolchain. The interface is Typescript with no additional frameworks or dependencies - it's intended to be more of an open building block that a community could fork and modify to suit their own needs.
+            </p>
+        </div>
+    </div>
+</ProjectLayout>

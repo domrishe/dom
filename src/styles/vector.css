@@ -1,0 +1,71 @@
+svg {
+    /* border: solid red; */
+}
+
+.rotator {
+    transform-box: fill-box;
+    transform-origin: 50% 50%;
+}
+
+#clock {
+    animation: rotate-clockwise 7s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+}
+
+#counter {
+    animation: rotate-counter-clockwise 7s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+}
+
+@keyframes rotate-clockwise {
+    0%, 20% {
+        transform: rotate(0deg);
+    }
+    20%, 25% {
+        transform: rotate(90deg);
+    }
+    25%, 45% {
+        transform: rotate(90deg);
+    }
+    45%, 50% {
+        transform: rotate(180deg);
+    }
+    50%, 70% {
+        transform: rotate(180deg);
+    }
+    70%, 75% {
+        transform: rotate(270deg);
+    }
+    75%, 95% {
+        transform: rotate(270deg);
+    }
+    95%, 100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+@keyframes rotate-counter-clockwise {
+    0%, 20% {
+        transform: rotate(0deg);
+    }
+    20%, 25% {
+        transform: rotate(-90deg);
+    }
+    25%, 45% {
+        transform: rotate(-90deg);
+    }
+    45%, 50% {
+        transform: rotate(-180deg);
+    }
+    50%, 70% {
+        transform: rotate(-180deg);
+    }
+    70%, 75% {
+        transform: rotate(-270deg);
+    }
+    75%, 95% {
+        transform: rotate(-270deg);
+    }
+    95%, 100% {
+        transform: rotate(-360deg);
+    }
+}

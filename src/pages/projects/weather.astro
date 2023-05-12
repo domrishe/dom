@@ -1,0 +1,86 @@
+---
+import ProjectLayout from "../../layouts/ProjectLayout.astro";
+---
+
+<ProjectLayout title="DAYDREAM CHAIR">
+
+
+    <div class="gallery" slot="gallery">
+        <div class="container">
+            <!-- <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span> -->
+            <a href="#img1">
+                <img
+                    src="../../../public/media/w_2.gif"
+                    id="expandedImg"
+                />
+            </a>
+            <div id="imgtext"></div>
+        </div>
+    
+        <div class="row">
+            <div class="column">
+                <img
+                    src="../../../public/media/w_2.gif"
+                    alt=""
+                    style="width:100%"
+                    class="thumb"
+                />
+            </div>
+                <div class="column">
+                    <img
+                        src="../../../public/media/w_5.gif"
+                        alt=""
+                        style="width:100%"
+                        class="thumb"
+                    />
+                </div>
+            <div class="column">
+                <img
+                    src="../../../public/media/w_4.gif"
+                    alt=""
+                    style="width:100%"
+                    class="thumb"
+                />
+            </div>
+            <div class="column">
+                <img
+                    src="../../../public/media/w_3.png"
+                    alt=""
+                    style="width:100%"
+                    class="thumb"
+                />
+            </div>
+
+
+        </div>
+    </div>
+        
+    
+
+
+
+
+    
+    <div class="description-wrap" slot="product-text">
+        <div class="product-title">
+            <p>NOAA NWS LOCAL WEATHER</p>
+        </div>
+        <div class="product-details">
+            <span>WHAT</span>
+            <p>
+                A re-design of the NOAA National Weather Service page.
+            </p>
+            <span class="why">WHY</span>
+            <p>
+                As an incredibly rich - and taxpayer-funded - source of weather data, NOAA's site deserves to be more widely used as people's daily go-to weather-checking site.
+            </p>
+            <span class="how">HOW</span>
+            <p>
+                Interface: Weather pictures meant to correspond to the users' local conditions were pulled from NOAA's impressive image database. The images were then used to generate color palettes with a light and dark mode for all UI elements. Clean lines, crowd-pleasing type leave you no excuse not to use this as your daily weather page.
+            </p>
+            <p>
+                Experience: To cut down on the overwhelming amount of data and options on the original page, a choice between "simple" and "detailed" view was added. In "detailed" view, a scroll box houses one of the NWS's most valuable yet overlooked features: a narrative evaluation of your local weather conditions by an NWS expert, updated in real time, multiple times a day. 
+            </p>
+        </div>
+    </div>
+</ProjectLayout>

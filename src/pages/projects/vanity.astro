@@ -1,0 +1,88 @@
+---
+import ProjectLayout from "../../layouts/ProjectLayout.astro";
+---
+
+<ProjectLayout title="VANITY">
+
+
+    <div class="gallery" slot="gallery">
+        <div class="container">
+            <!-- <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span> -->
+            <a href="#img1">
+                <img
+                    src="../../../public/media/v_1.png"
+                    id="expandedImg"
+                />
+            </a>
+            <div id="imgtext"></div>
+        </div>
+    
+        <div class="row">
+            <div class="column">
+                <img
+                    src="../../../public/media/v_1.png"
+                    alt=""
+                    style="width:100%"
+                    class="thumb"
+                />
+            </div>
+            <div class="column">
+                <img
+                    src="../../../public/media/v_2.jpeg"
+                    alt=""
+                    style="width:100%"
+                    class="thumb"
+                />
+            </div>
+            <div class="column">
+                <img
+                    src="../../../public/media/v_3.jpeg"
+                    alt=""
+                    style="width:100%"
+                    class="thumb"
+                />
+            </div>
+            <div class="column">
+                <img
+                    src="../../../public/media/v_4.jpeg"
+                    alt=""
+                    style="width:100%"
+                    class="thumb"
+                />
+            </div>
+ 
+        </div>
+    </div>
+        
+    <div
+    id="lightboximg"
+    style="background-image: url('../../../public/media/v_1.png')"
+    slot="lightboximg"
+    >
+    </div>
+
+
+
+
+
+    
+    <div class="description-wrap" slot="product-text">
+        <div class="product-title">
+            <p>AMBROSIA VANITY</p>
+        </div>
+        <div class="product-details">
+            <span>WHAT</span>
+            <p>
+                A spot to wash up.
+            </p>
+            <span class="why">WHY</span>
+            <p>
+                To tie the bow on a complete master bathroom remodel.
+            </p>
+            <span class="how">HOW</span>
+            <p>
+                Ambrosia maple, mortise-and-tenon case, dovetailed drawer, brass knife hinges, hand-thrown ceramic sink. All joinery hand-cut. 
+            </p>
+        </div>
+    </div>
+</ProjectLayout>

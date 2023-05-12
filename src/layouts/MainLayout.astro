@@ -1,0 +1,87 @@
+---
+export interface Props {
+	title: string;
+}
+
+import "../styles/base.css";
+import "../styles/basic-grid.css";
+import "../styles/vector.css";
+
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;500&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;1,100&display=swap"
+			rel="stylesheet">
+
+	</head>
+	<body>
+
+
+		<nav id="navbar">
+			<div id="main-title">
+				<a href="#" class="nav-link">
+					<svg viewBox="0 0 200 80" style="width:120px; height:48px;">
+						<rect id="clock" class="rotator" x="10" y="10" width="30" height="30" fill="black" />
+						<rect id="counter" class="rotator" x="10" y="40" width="30" height="30" fill="black" />
+						<rect id="clock" class="rotator" x="130" y="40" width="30" height="30" fill="black" />
+						<rect id="counter" class="rotator" x="160" y="40" width="30" height="30" fill="black" />
+						<path id="counter" class="rotator" d="M 40 40 L 70 40 A 30 30 0 0 0 40 10 Z" fill="black" />
+						<path id="clock" class="rotator" d="M 40 40 L 70 40 A 30 30 0 0 1 40 70 Z" fill="black" />
+						<path id="counter" class="rotator" d="M 100 40 L 70 40 A 30 30 0 0 1 100 10 Z" fill="black" />
+						<path id="clock" class="rotator" d="M 100 40 L 130 40 A 30 30 0 0 0 100 10 Z" fill="black" />
+						<path id="counter" class="rotator" d="M 100 40 L 130 40 A 30 30 0 0 1 100 70 Z" fill="black" />
+						<path id="clock" class="rotator" d="M 100 40 L 70 40 A 30 30 0 0 0 100 70 Z" fill="black" />
+						<path id="counter" class="rotator" d="M 130 40 L 130 10 A 30 30 0 0 1 160 40 Z" fill="black" />
+						<path id="clock" class="rotator" d="M 190 40 L 160 40 A 30 30 0 0 1 190 10 Z" fill="black" />
+					</svg>
+							</a>
+		</div>
+			<ul id="navbar-list">
+				<li class="nav-item" id="garden">
+					<a href="/dom/garden" class="nav-link" id="garden">
+						garden
+					</a>
+				</li>
+				<li class="nav-item" id="market">
+					<a href="/dom/market" class="nav-link" id="market">
+						market
+					</a>
+				</li>
+				<li class="nav-item" id="portfolio">
+					<a href="/dom/portfolio" class="nav-link" id="portfolio">
+						portfolio
+					</a>
+				</li>
+				<li class="nav-item" id="about">
+					<a href="/dom/about" class="nav-link" id="about">
+						about
+					</a>
+				</li>
+			</ul>
+		</nav>
+
+
+
+
+		<slot />
+
+		<footer class="main-foot">
+			<p class="foot-tag">[Coded by hand, with pleasure, pain and <a href="https://astro.build/">Astro</a>.]</p>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,42 @@
+.garden-blurb {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+}
+
+.garden-blurb p {
+    text-align: center;
+}
+
+.garden-blurb img {
+    width: 200px;
+    height: 200px;
+    margin: 30px;
+}
+
+
+.status {
+font-family: 'Compagnon Light';
+font-size: 1.5rem;
+}
+
+.status-text {
+    font-family: 'Compagnon Medium';
+    line-height: 1rem;
+    font-size: 0.9rem;
+
+}
+
+.garden-blurb a {
+    text-decoration: underline;
+}
+
+.garden-blurb a:hover {
+    font-style: italic;
+    cursor: pointer;
+    color: #35F2B0;
+}

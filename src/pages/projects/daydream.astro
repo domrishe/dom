@@ -1,0 +1,132 @@
+---
+import ProjectLayout from "../../layouts/ProjectLayout.astro";
+---
+
+<ProjectLayout title="DAYDREAM CHAIR">
+
+
+    <div class="gallery" slot="gallery">
+        <div class="container">
+            <!-- <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span> -->
+            <a href="#img1">
+                <img
+                    src="../../../public/media/dd_1.jpg"
+                    id="expandedImg"
+                />
+            </a>
+            <div id="imgtext"></div>
+        </div>
+    
+        <div class="row">
+            <div class="column">
+                <img
+                    src="../../../public/media/dd_1.jpg"
+                    alt=""
+                    style="width:100%"
+                    class="thumb"
+                />
+            </div>
+            <div class="column">
+                <img
+                    src="../../../public/media/dd_2.jpg"
+                    alt=""
+                    style="width:100%"
+                    class="thumb"
+                />
+            </div>
+            <div class="column">
+                <img
+                    src="../../../public/media/dd_3.jpg"
+                    alt=""
+                    style="width:100%"
+                    class="thumb"
+                />
+            </div>
+            <div class="column">
+                <img
+                    src="../../../public/media/dd_4.jpg"
+                    alt=""
+                    style="width:100%"
+                    class="thumb"
+                />
+            </div>
+            <div class="column">
+                <img
+                    src="../../../public/media/dd_5.jpeg"
+                    alt=""
+                    style="width:100%"
+                    class="thumb"
+                />
+            </div>
+            <div class="column">
+                <img
+                    src="../../../public/media/dd_6.jpeg"
+                    alt=""
+                    style="width:100%"
+                    class="thumb"
+                />
+            </div>
+            <div class="column">
+                <img
+                    src="../../../public/media/dd_7.jpeg"
+                    alt=""
+                    style="width:100%"
+                    class="thumb"
+                />
+            </div>
+            <div class="column">
+                <img
+                    src="../../../public/media/dd_8.jpeg"
+                    alt=""
+                    style="width:100%"
+                    class="thumb"
+                />
+            </div>
+            <div class="column">
+                <img
+                    src="../../../public/media/dd_9.png"
+                    alt=""
+                    style="width:100%"
+                    class="thumb"
+                />
+            </div>
+
+        </div>
+    </div>
+        
+    
+
+    <div
+    id="lightboximg"
+    style="background-image: url('../../../public/media/dd_1.jpg')"
+    slot="lightboximg"
+    >
+    </div>
+
+
+    
+    <div class="description-wrap" slot="product-text">
+        <div class="product-title">
+            <p>DAYDREAM CHAIR</p>
+        </div>
+        <div class="product-details">
+            <span>WHAT</span>
+            <p>
+                A stool, suitable for working at a high desk, becomes a
+                lounge chair when the orientation of the two pieces is adjusted.
+            </p>
+            <span class="why">WHY</span>
+            <p>
+                Most chairs designed for desks optimize around a shallow
+                understanding of human labor, at the expense of an essential
+                aspect of our experience, and something that's vital to the creative process - leisure.
+            </p>
+            <span class="how">HOW</span>
+            <p>
+                Each stave is 14 layers of bent, laminated white oak. Brass
+                rods key the two halves together. Finished with a blend
+                of flax oil and beeswax.
+            </p>
+        </div>
+    </div>
+</ProjectLayout>

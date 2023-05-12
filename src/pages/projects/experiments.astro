@@ -1,0 +1,89 @@
+---
+import ProjectLayout from "../../layouts/ProjectLayout.astro";
+---
+
+<ProjectLayout title="FORM EXPERIMENTS">
+
+
+    <div class="gallery" slot="gallery">
+        <div class="container">
+            <!-- <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span> -->
+            <a href="#img1">
+                <img
+                    src="../../../public/media/ex_1.png"
+                    id="expandedImg"
+                />
+            </a>
+            <div id="imgtext"></div>
+        </div>
+    
+        <div class="row">
+            <div class="column">
+                <img
+                    src="../../../public/media/ex_1.png"
+                    alt=""
+                    style="width:100%"
+                    class="thumb"
+                />
+            </div>
+            <div class="column">
+                <img
+                    src="../../../public/media/ex_2.png"
+                    alt=""
+                    style="width:100%"
+                    class="thumb"
+                />
+            </div>
+            <div class="column">
+                <img
+                    src="../../../public/media/ex_3.png"
+                    alt=""
+                    style="width:100%"
+                    class="thumb"
+                />
+            </div>
+            <div class="column">
+                <img
+                    src="../../../public/media/ex_4.png"
+                    alt=""
+                    style="width:100%"
+                    class="thumb"
+                />
+            </div>
+        </div>
+    </div>
+        
+    <div
+    id="lightboximg"
+    style="background-image: url('../../../public/media/ex_1.png')"
+    slot="lightboximg"
+    >
+    </div>
+
+
+
+
+    
+    <div class="description-wrap" slot="product-text">
+        <div class="product-title">
+            <p>FORM EXPERIMENTS</p>
+        </div>
+        <div class="product-details">
+            <span>WHAT</span>
+            <p>
+                A place to collect some of the more successful form explorations from a variety of projects.
+            </p>
+            <span class="why">WHY</span>
+            <p>
+                Documenting small successes and interesting aesthetic tangents with the hope that they influence future work, and providing a bar to reach for when prototyping and experimenting, even in undefined contexts.
+            </p>
+            <span class="how">HOW</span>
+        
+                <p>1 * XPS foam</p>
+                <p>2 * XPS foam, finished and painted</p>
+                <p>3 * bent copper, artificially corroded</p>
+                <p>4 * bent laminated chipboard</p>
+            
+        </div>
+    </div>
+</ProjectLayout>

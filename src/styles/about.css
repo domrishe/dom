@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'Compagnon Medium';
+    src: url('/fonts/Comp/Compagnon-Medium.eot') format('eot'),
+         url('/fonts/Comp/Compagnon-Medium.woff') format('woff'),
+         url('/fonts/Comp/Compagnon-Medium.woff2') format('woff2');
+    font-weight: medium;
+    font-style: medium;
+  }
+
+@font-face {
+font-family: 'Compagnon Light';
+src: url('/fonts/Comp/Compagnon-Light.eot') format('eot'),
+        url('/fonts/Comp/Compagnon-Light.woff') format('woff'),
+        url('/fonts/Comp/Compagnon-Light.woff2') format('woff2');
+font-weight: light;
+font-style: light;
+}
+
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: top;
+    padding: 33px;
+    /* border: solid blue 3px; */
+  }
+  
+  .blurb {
+    flex: 1;
+    margin: 10px;
+    /* border: solid red 3px; */
+    max-width: 500px;
+    min-width: 300px;
+
+  }
+
+  .blurb span {
+    font-family: 'Compagnon Light';
+    font-size: 1.5rem;
+  }
+
+  .blurb p{
+    font-family: 'Compagnon Medium';
+    line-height: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .pfp {
+    flex: 0;
+    margin: 10px;
+    /* border: solid green 3px; */
+    width: 300px;
+  }
+
+  .pfp img {
+width: 300px;
+  }
+
+  #tag {
+    background-color: aquamarine;
+  }
+  
