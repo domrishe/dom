@@ -1,6 +1,17 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import '../styles/basic-grid.css';
+import {Picture} from "@astrojs/image/components";
+//images
+import dd_1_thumb from '../media/dd_1_thumb.png';
+import lepta_thumb from '../media/lepta_thumb.png';
+import gp_1_thumb from '../media/gp_1_thumb.png';
+import w_5 from '../media/w_5.gif';
+import ex_1_thumb from '../media/ex_1_thumb.png';
+import myRISD_1_thumb from '../media/myRISD_1_thumb.png';
+import v_1_thumb from '../media/v_1_thumb.png';
+import c_6 from '../media/c_6.jpeg';
+import co_1 from '../media/co_1.png';
 ---
 
 <MainLayout title="Portfolio - Dom">
@@ -9,7 +20,8 @@ import '../styles/basic-grid.css';
 		<section class="basic-grid">
 			<a href="../dom/projects/daydream/">
 			<div class="card">
-				<img class="card-img" id="img1" src="../../../public/media/dd_1_thumb.png">
+				<img src={dd_1_thumb.src} alt="portfolio item" class="card-img" />
+
 				<footer class="card-foot">
 					<p class="label">CHAIR(DAYDREAM)</p>
 					<p class="slug">SP2022</p>
@@ -18,7 +30,8 @@ import '../styles/basic-grid.css';
 			</a>
 			<a href="../dom/projects/lepta/">
 				<div class="card">
-					<img class="card-img" id="img1" src="../../../media/lepta_thumb.png">
+					<img src={lepta_thumb.src} alt="portfolio item" class="card-img" />
+
 					<footer class="card-foot">
 						<p class="label">LEPTA PROTOCOL</p>
 						<p class="slug">SP2023</p>
@@ -27,16 +40,25 @@ import '../styles/basic-grid.css';
 				</a>
 			<a href="../dom/projects/ganpaign/">
 			<div id="test_card" class="card">
-				<img id="img2" src="../../../public/media/gp_1_thumb.png">
+				<img src={gp_1_thumb.src} alt="portfolio item" class="card-img" />
 				<footer class="card-foot">
 					<p class="label">{'{'}GAN{'}'}PAIGN CHAIR</p>
 					<p class="slug">SU2022</p>
 				</footer>
 			</div> 
 			</a>
+			<a href="../dom/projects/experiments/">
+				<div id="test_card" class="card">
+					<img src={c_6.src} alt="portfolio item" class="card-img" />
+					<footer class="card-foot">
+						<p class="label">BIO-PLASTICS</p>
+						<p class="slug">FA2022</p>
+					</footer>
+				</div>
+				</a>
 			<a href="../dom/projects/weather/">
 				<div id="test_card" class="card">
-					<img id="myrisd" src="../../../public/media/w_5.gif">
+					<img src={w_5.src} alt="portfolio item" class="card-img" />
 					<footer class="card-foot">
 						<p class="label">NOAA NWS</p>
 						<p class="slug">WI2023</p>
@@ -45,16 +67,26 @@ import '../styles/basic-grid.css';
 				</a>
 			<a href="../dom/projects/experiments/">
 			<div id="test_card" class="card">
-				<img id="img3" src="../../../public/media/ex_1_thumb.png">
+				<img src={ex_1_thumb.src} alt="portfolio item" class="card-img" />
 				<footer class="card-foot">
 					<p class="label">FORM EXPERIMENTS</p>
 					<p class="slug">ONGOING</p>
 				</footer>
 			</div>
+		</a>
+		<a href="../dom/projects/myrisd/">
+			<div id="test_card" class="card">
+				<img src={co_1.src} alt="portfolio item" class="card-img" />
+				<footer class="card-foot">
+					<p class="label">STABLE DIFFUSION COLORING BOOK</p>
+					<p class="slug">SP2023</p>
+				</footer>
+			</div>
+			</a>
 			</a>
 			<a href="../dom/projects/myrisd/">
 				<div id="test_card" class="card">
-					<img id="myrisd" src="../../../public/media/myRISD_1_thumb.png">
+					<img src={myRISD_1_thumb.src} alt="portfolio item" class="card-img" />
 					<footer class="card-foot">
 						<p class="label">MyRISD</p>
 						<p class="slug">WI2023</p>
@@ -63,7 +95,7 @@ import '../styles/basic-grid.css';
 				</a>
 			<a href="../dom/projects/vanity/">
 			<div id="test_card" class="card">
-				<img id="img4" src="../../../public/media/v_1_thumb.png">
+				<img src={v_1_thumb.src} alt="portfolio item" class="card-img" />
 				<footer class="card-foot">
 					<p class="label">AMBROSIA VANITY</p>
 					<p class="slug">SU2021</p>

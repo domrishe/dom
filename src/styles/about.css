@@ -35,6 +35,23 @@ font-style: light;
 
   }
 
+  .status-text {
+    font-family: 'Compagnon Medium';
+    line-height: 1rem;
+    font-size: 0.9rem;
+
+}
+
+.status-text a {
+  text-decoration: underline;
+}
+
+.status-text a:hover {
+  font-style: italic;
+  cursor: pointer;
+  color: #35F2B0;
+}
+
   .blurb span {
     font-family: 'Compagnon Light';
     font-size: 1.5rem;

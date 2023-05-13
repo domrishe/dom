@@ -1,46 +1,37 @@
 ---
 import ProjectLayout from "../../layouts/ProjectLayout.astro";
+const images = await Astro.glob('../../media/Projects/lepta/*').then(files => {return files.map(file => file.default);}); 
+
 ---
 
-<ProjectLayout title="DAYDREAM CHAIR">
-
+<ProjectLayout title="LEPTA">
 
     <div class="gallery" slot="gallery">
         <div class="container">
-            <!-- <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span> -->
             <a href="#img1">
-                <img
-                    src="../../../media/lepta_1.gif"
-                    id="expandedImg"
-                />
+                <img src={images[0].src} alt="portfolio item" id="expandedImg" />
             </a>
             <div id="imgtext"></div>
         </div>
-    
         <div class="row">
-            <div class="column">
-                <img
-                    src="../../../media/lepta_1.gif"
-                    alt=""
-                    style="width:100%"
-                    class="thumb"
-                />
-            </div>
-                <div class="column">
-                    <img
-                        src="../../../media/lepta_2.gif"
-                        alt=""
-                        style="width:100%"
-                        class="thumb"
-                    />
-                </div>
 
+        {images.map((image) => (
+            <div class="column">
+                <img src={image.src} alt="portfolio item" class="thumb" style="width:100%" />
+            </div>
+        ))}
 
         </div>
     </div>
         
     
 
+    <div
+    id="lightboximg"
+    style={{ backgroundImage: `url(${images[0].src})` }};
+    slot="lightboximg"
+    >
+    </div>
 
 
 
@@ -53,11 +44,11 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
         <div class="product-details">
             <span>WHAT</span>
             <p>
-                A set of primitive smart contracts designed for small communities to pool their resources together and share according to their own rules.
+                A set of primitive smart contracts designed for small communities to pool their resources together and share according to their own rules. Named after the ancient Greek equivalent of the penny.
             </p>
             <span class="why">WHY</span>
             <p>
-                The "De" in "DeFi" shouldn't always mean "degenerate". There are many communities who could benefit from breaking free of institutional control over their finances, and who have no interest in trading on leverage or flipping NFTs - what most DeFi protocols seem to be focused on.
+                The "De" in "DeFi" shouldn't always mean "degenerate". There are many communities who could benefit from breaking free of institutional control over their finances, and who have no interest in trading on leverage or flipping 💩 coins - what most DeFi protocols seem to be focused on.
             </p>
             <span class="how">HOW</span>
             <p>

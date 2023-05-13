@@ -23,7 +23,8 @@ const { title } = Astro.props;
 
 			expandImg.src = imgs.src;
 			lightboximg.style.backgroundImage = `url(${imgs.src})`;
-			imgText.innerHTML = imgs.alt;
+			
+
 		}
 
 		document.addEventListener("DOMContentLoaded", function () {
@@ -34,6 +35,13 @@ const { title } = Astro.props;
 				});
 			});
 		});
+
+
+
+
+
+
+
 	</script>
 
 	<!-- The four columns -->
@@ -51,10 +59,10 @@ const { title } = Astro.props;
 	<a href="#" class="lightbox" id="img1">
 
 		<slot name="lightboximg"/>
-		<div
+		<!-- <div
 			id="lightboximg"
 			style="background-image: url('./images/chair_nn_1.jpg')"
 		>
-		</div>
+		</div> -->
 	</a>
 </MainLayout>

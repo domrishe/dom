@@ -1,0 +1,61 @@
+---
+import ProjectLayout from "../../layouts/ProjectLayout.astro";
+const images = await Astro.glob('../../media/Projects/coloring/*').then(files => {return files.map(file => file.default);}); 
+
+---
+
+<ProjectLayout title="AI COLORING">
+
+
+    <div class="gallery" slot="gallery">
+        <div class="container">
+            <a href="#img1">
+                <img src={images[0].src} alt="portfolio item" id="expandedImg" />
+            </a>
+            <div id="imgtext"></div>
+        </div>
+        <div class="row">
+
+        {images.map((image) => (
+            <div class="column">
+                <img src={image.src} alt="portfolio item" class="thumb" style="width:100%" />
+            </div>
+        ))}
+
+        </div>
+    </div>
+        
+    
+
+    <div
+    id="lightboximg"
+    style={{ backgroundImage: `url(${images[0].src})` }};
+    slot="lightboximg"
+    >
+    </div>
+
+
+
+
+    
+    <div class="description-wrap" slot="product-text">
+        <div class="product-title">
+            <p>STABLE DIFFUSION COLORING BOOK GENERATOR</p>
+        </div>
+        <div class="product-details">
+            <span>WHAT</span>
+            <p>
+                An diffusion model trained to give you things to color. 
+            </p>
+            <span class="why">WHY</span>
+            <p>
+                Adults shouldn't be in charge of what kids get to color.
+            </p>
+            <span class="how">HOW</span>
+        
+                <p>A Stable Diffusion model was trained on a set of black and white line drawings. When the user inputs a prompt, some additional style language is injected into it before being passed to the model, which helps keep the outputs more consistent and "colorable".</p>
+
+            
+        </div>
+    </div>
+</ProjectLayout>

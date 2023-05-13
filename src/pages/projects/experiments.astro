@@ -1,5 +1,7 @@
 ---
 import ProjectLayout from "../../layouts/ProjectLayout.astro";
+const images = await Astro.glob('../../media/Projects/experiments/*').then(files => {return files.map(file => file.default);}); 
+
 ---
 
 <ProjectLayout title="FORM EXPERIMENTS">
@@ -7,55 +9,27 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
 
     <div class="gallery" slot="gallery">
         <div class="container">
-            <!-- <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span> -->
             <a href="#img1">
-                <img
-                    src="../../../public/media/ex_1.png"
-                    id="expandedImg"
-                />
+                <img src={images[0].src} alt="portfolio item" id="expandedImg" />
             </a>
             <div id="imgtext"></div>
         </div>
-    
         <div class="row">
+
+        {images.map((image) => (
             <div class="column">
-                <img
-                    src="../../../public/media/ex_1.png"
-                    alt=""
-                    style="width:100%"
-                    class="thumb"
-                />
+                <img src={image.src} alt="portfolio item" class="thumb" style="width:100%" />
             </div>
-            <div class="column">
-                <img
-                    src="../../../public/media/ex_2.png"
-                    alt=""
-                    style="width:100%"
-                    class="thumb"
-                />
-            </div>
-            <div class="column">
-                <img
-                    src="../../../public/media/ex_3.png"
-                    alt=""
-                    style="width:100%"
-                    class="thumb"
-                />
-            </div>
-            <div class="column">
-                <img
-                    src="../../../public/media/ex_4.png"
-                    alt=""
-                    style="width:100%"
-                    class="thumb"
-                />
-            </div>
+        ))}
+
         </div>
     </div>
         
+    
+
     <div
     id="lightboximg"
-    style="background-image: url('../../../public/media/ex_1.png')"
+    style={{ backgroundImage: `url(${images[0].src})` }};
     slot="lightboximg"
     >
     </div>

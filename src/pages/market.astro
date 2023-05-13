@@ -2,6 +2,7 @@
 import MainLayout from '../layouts/MainLayout.astro';
 import '../styles/basic-grid.css';
 import '../styles/garden.css';
+import stand from '../media/stand.png';
 ---
 
 <MainLayout title="Portfolio - Dom">
@@ -10,7 +11,7 @@ import '../styles/garden.css';
 	
 	 <div class="garden-blurb">
 		
-		<img id="myrisd" src="../../../public/media/stand.png">
+		<img id="garden" src={stand.src}>
 		<p class="status">Setting up shop... </p>
 		<p class="status-text">Working on a few designs that I plan to release here and sell directly to whomever may be interested. For now, if you'd like me to build you something, reach out.</p>
 

@@ -1,61 +1,38 @@
 ---
 import ProjectLayout from "../../layouts/ProjectLayout.astro";
+const images = await Astro.glob('../../media/Projects/weather/*').then(files => {return files.map(file => file.default);}); 
+
 ---
 
-<ProjectLayout title="DAYDREAM CHAIR">
+<ProjectLayout title="WEATHER">
 
 
     <div class="gallery" slot="gallery">
         <div class="container">
-            <!-- <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span> -->
             <a href="#img1">
-                <img
-                    src="../../../public/media/w_2.gif"
-                    id="expandedImg"
-                />
+                <img src={images[0].src} alt="portfolio item" id="expandedImg" />
             </a>
             <div id="imgtext"></div>
         </div>
-    
         <div class="row">
-            <div class="column">
-                <img
-                    src="../../../public/media/w_2.gif"
-                    alt=""
-                    style="width:100%"
-                    class="thumb"
-                />
-            </div>
-                <div class="column">
-                    <img
-                        src="../../../public/media/w_5.gif"
-                        alt=""
-                        style="width:100%"
-                        class="thumb"
-                    />
-                </div>
-            <div class="column">
-                <img
-                    src="../../../public/media/w_4.gif"
-                    alt=""
-                    style="width:100%"
-                    class="thumb"
-                />
-            </div>
-            <div class="column">
-                <img
-                    src="../../../public/media/w_3.png"
-                    alt=""
-                    style="width:100%"
-                    class="thumb"
-                />
-            </div>
 
+        {images.map((image) => (
+            <div class="column">
+                <img src={image.src} alt="portfolio item" class="thumb" style="width:100%" />
+            </div>
+        ))}
 
         </div>
     </div>
         
     
+
+    <div
+    id="lightboximg"
+    style={{ backgroundImage: `url(${images[0].src})` }};
+    slot="lightboximg"
+    >
+    </div>
 
 
 

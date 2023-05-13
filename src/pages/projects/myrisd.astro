@@ -1,5 +1,7 @@
 ---
 import ProjectLayout from "../../layouts/ProjectLayout.astro";
+const images = await Astro.glob('../../media/Projects/myrisd/*').then(files => {return files.map(file => file.default);}); 
+
 ---
 
 <ProjectLayout title="MyRISD">
@@ -7,56 +9,27 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
 
     <div class="gallery" slot="gallery">
         <div class="container">
-            <!-- <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span> -->
             <a href="#img1">
-                <img
-                    src="../../../public/media/myRISD.gif"
-                    id="expandedImg"
-                />
+                <img src={images[0].src} alt="portfolio item" id="expandedImg" />
             </a>
             <div id="imgtext"></div>
         </div>
-    
-        <!-- <div class="row">
+        <div class="row">
+
+        {images.map((image) => (
             <div class="column">
-                <img
-                    src="../../../public/media/v_1.png"
-                    alt=""
-                    style="width:100%"
-                    class="thumb"
-                />
+                <img src={image.src} alt="portfolio item" class="thumb" style="width:100%" />
             </div>
-            <div class="column">
-                <img
-                    src="../../../public/media/v_2.jpeg"
-                    alt=""
-                    style="width:100%"
-                    class="thumb"
-                />
-            </div>
-            <div class="column">
-                <img
-                    src="../../../public/media/v_3.jpeg"
-                    alt=""
-                    style="width:100%"
-                    class="thumb"
-                />
-            </div>
-            <div class="column">
-                <img
-                    src="../../../public/media/v_4.jpeg"
-                    alt=""
-                    style="width:100%"
-                    class="thumb"
-                />
-            </div>
- 
-        </div> -->
+        ))}
+
+        </div>
     </div>
         
+    
+
     <div
     id="lightboximg"
-    style="background-image: url('../../../public/media/myRISD.gif')"
+    style={{ backgroundImage: `url(${images[0].src})` }};
     slot="lightboximg"
     >
     </div>

@@ -1,89 +1,36 @@
 ---
 import ProjectLayout from "../../layouts/ProjectLayout.astro";
+const images = await Astro.glob('../../media/Projects/ganpaign/*').then(files => {return files.map(file => file.default);}); 
 ---
 
 <ProjectLayout title="{GAN}PAIGN CHAIR">
 
-<div class="gallery" slot="gallery">
-    <div class="container">
-        <!-- <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span> -->
-        <a href="#img1">
-            <img
-                src="../../../public/media/gp_1.jpg"
-                id="expandedImg"
-            />
-        </a>
-        <div id="imgtext"></div>
-    </div>
+    <div class="gallery" slot="gallery">
+        <div class="container">
+            <a href="#img1">
+                <img src={images[0].src} alt="portfolio item" id="expandedImg" />
+            </a>
+            <div id="imgtext"></div>
+        </div>
+        <div class="row">
 
-    
-    <div class="row">
-        <div class="column">
-            <img
-                src="../../../public/media/gp_1.jpg"
-                alt=""
-                style="width:100%"
-                class="thumb"
-            />
-        </div>
-        <div class="column">
-            <img
-                src="../../../public/media/gp_2.jpg"
-                alt=""
-                style="width:100%"
-                class="thumb"
-            />
-        </div>
-        <div class="column">
-            <img
-                src="../../../public/media/gp_3.jpg"
-                alt=""
-                style="width:100%"
-                class="thumb"
-            />
-        </div>
-        <div class="column">
-            <img
-                src="../../../public/media/gp_4.jpg"
-                alt=""
-                style="width:100%"
-                class="thumb"
-            />
-        </div>
-        <div class="column">
-            <img
-                src="../../../public/media/gp_5.jpeg"
-                alt=""
-                style="width:100%"
-                class="thumb"
-            />
-        </div>
-        <div class="column">
-            <img
-                src="../../../public/media/gp_6.jpg"
-                alt=""
-                style="width:100%"
-                class="thumb"
-            />
-        </div>
-        <div class="column">
-            <img
-                src="../../../public/media/gp_7.jpeg"
-                alt=""
-                style="width:100%"
-                class="thumb"
-            />
-        </div>
+        {images.map((image) => (
+            <div class="column">
+                <img src={image.src} alt="portfolio item" class="thumb" style="width:100%" />
+            </div>
+        ))}
 
+        </div>
     </div>
-</div>
+        
     
-<div
-id="lightboximg"
-style="background-image: url('../../../public/media/gp_1.jpg')"
-slot="lightboximg"
->
-</div>
+
+    <div
+    id="lightboximg"
+    style={{ backgroundImage: `url(${images[0].src})` }};
+    slot="lightboximg"
+    >
+    </div>
 
 
     

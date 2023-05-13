@@ -5,6 +5,7 @@
     /* grid-template-columns: max(1fr, 400px); */
     padding: 20px 0px;
     justify-content: center;
+    /* border: solid black; */
 }
 
 .basic-grid a > div {

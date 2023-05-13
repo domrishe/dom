@@ -2,6 +2,7 @@
 import MainLayout from '../layouts/MainLayout.astro';
 import '../styles/basic-grid.css';
 import '../styles/about.css';
+import about from '../media/about.png';
 
 ---
 
@@ -9,12 +10,20 @@ import '../styles/about.css';
 
 	<div class="flex-container">
         <div class="pfp">
-          <img src="../../../public/media/about.png" alt="A picture of Dominic with a warm/cool contrast color study over his face.">
+          <img src={about.src} alt="A picture of Dominic with a warm/cool contrast color study over his face.">
         </div>
         <div class="blurb">
           <span>Dominic is an </span><span>engineer & designer.</span>
           <p id="blurb-text">
             Currently working on a Master's degree at the Rhode Island School of Design, where he's exploring the intersections of craft and technology. Previously helping deliver helicpoters, ships, and armored vehicles for the US Navy and Marine Corps. If any of the work or thoughts on this site interest you, please do reach out, via whatever channel you like. 
+        </p>
+
+        <p class="status-text">
+          <a href="https://drive.google.com/file/d/1jntKY1r28zIzwDetaXiyVlXfAhZCJf2u/view?usp=share_link">Resume</a> / 
+          <a href="https://www.linkedin.com/in/dominic-rishe-03501381/">LinkedIn</a> / 
+          <a href="https://www.instagram.com/nouveau_rishe/">Instagram</a> / 
+          <a href="https://twitter.com/nouveau_rishe">Twitter</a>
+
         </p>
         </div>
       </div>
