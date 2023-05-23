@@ -40,22 +40,25 @@ const images = await Astro.glob('../../media/Projects/lepta/*').then(files => {r
         <div class="product-title">
             <p>LEPTA PROTOCOL</p>
             <p class="wip">[WIP]</p>
+            <p class="wip">
+                <a href="https://lepta.framer.website/landing">(See the app here)</a>
+            </p>
         </div>
         <div class="product-details">
             <span>WHAT</span>
             <p>
-                A set of primitive smart contracts designed for small communities to pool their resources together and share according to their own rules. Named after the ancient Greek equivalent of the penny.
+                A blockchain-based application for peer-to-pool uncollateralized lending, with the intent of serving as an alternative to payday lenders, credit cards, or other predatory lenders that often target people when they're at their most vulnerable.
             </p>
             <span class="why">WHY</span>
             <p>
-                The "De" in "DeFi" shouldn't always mean "degenerate". There are many communities who could benefit from breaking free of institutional control over their finances, and who have no interest in trading on leverage or flipping 💩 coins - what most DeFi protocols seem to be focused on.
+                Those at the extreme low end of the credit system have few good options. The combination of anonymity and radical transparency on the blockchain offers a way for groups to share the need for credit among themselves rather than institutions that extract profit at the expense of borrowers.
             </p>
             <span class="how">HOW</span>
             <p>
-                The first smart contract is currently being tested on the Algorand blockchain - chosen for its low fees, speed, and easy developer experience (the high Tx fees on Ethereum, even on L2's, just don't align with the ethos of this project). 
+                Borrowers are free to take up to $400 (the average payday loan) permissionlessly from a shared pool of money. If they pay it back, plus a pay-what-you-can tip, they earn points that let them borrow more the next time. Points are distributed based on a convex dividend rate, which rewards long-term generosity to the pool. Points are also distributed more readily when the pool balance is getting low. Depositers share the collected tips between them, based on their time-weighted share of the pool. 
             </p>
             <p>
-                The smart contract was written in PyTEAL, along with the Beaker framework and the newly released Algokit toolchain. The interface is Typescript with no additional frameworks or dependencies - it's intended to be more of an open building block that a community could fork and modify to suit their own needs.
+                The app is being built on the Algorand blockchain, chosen for its low fees, speed, and easy developer experience. The smart contract was written in PyTEAL, along with the Beaker framework and the newly released Algokit toolchain. The interface is Typescript with no additional frameworks or dependencies - it's intended to be more of an open building block that a community could fork and modify to suit their own needs.
             </p>
         </div>
     </div>
