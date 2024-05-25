@@ -1,6 +1,6 @@
 .basic-grid {
     display: grid;
-    gap: 30px;
+    gap: 70px;
     /* grid-template-columns: repeat(auto-fit, minmax(max(20%, 200px), 1fr)); */
     /* grid-template-columns: max(1fr, 400px); */
     grid-template-columns: repeat(3, 1fr);
