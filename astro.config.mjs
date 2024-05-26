@@ -5,7 +5,7 @@ import image from "@astrojs/image";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://dom.energy',
-  base: '/dom',
+  base: '/',
   integrations: [image({
     serviceEntryPoint: '@astrojs/image/sharp'
   })],
