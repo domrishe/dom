@@ -1,5 +1,13 @@
 ---
 import EmptyLayout from '../layouts/Layout.astro';
+
+import iac from '../media/iac.gif';
+import lud from '../media/lud1.gif';
+import ig from '../media/Instagram_Glyph_Black.svg';
+import fc from '../media/fc_logo.svg';
+import x from '../media/x.png';
+import li from '../media/li.svg';
+import zora from '../media/zorb.png';
 ---
 
 <EmptyLayout title="Dom">
@@ -24,9 +32,48 @@ import EmptyLayout from '../layouts/Layout.astro';
 		}
 		
 		body {
-			background-color: #FFFFFF;
+			background-color: #F4F0EC;
 		
 		}
+
+        .link {
+        font-weight: 500;
+        font-style: normal;
+        }
+
+        .eb-garamond-unique {
+        font-family: "EB Garamond", serif;
+        font-optical-sizing: auto;
+        font-weight: 600; /* Adjust the weight as needed */
+        font-style: normal;
+        }
+
+
+        .headline {
+        text-align: center;
+        /* font-family: "Georgia", monospace;
+        font-weight: 10; */
+        font-size: 1rem;
+        margin: 77px auto;
+        max-width: 600px; /* Adjust this width as needed */
+        color: #272520;
+
+        font-family: "EB Garamond", serif;
+        font-optical-sizing: auto;
+        font-weight: 400; /* Adjust the weight as needed */
+        font-style: italic;
+        }
+
+
+        .social-media a {
+            margin: 0 10px;
+            display: inline-block;
+        }
+
+        .social-media img {
+            width: 20px;
+            height: 20px;
+        }
 		
 		.rotator {
 			transform-box: fill-box;
@@ -141,7 +188,7 @@ a:visited {
 		</head>
 		<body id="bg">
 		
-			<svg viewBox="0 0 200 80" style="width:200px; height:250px;">
+			<svg viewBox="0 0 200 80" style="width:200px; height:200px; transform: scale(0.70); transform-origin: center;">
 				<rect id="clock" class="rotator" x="10" y="10" width="30" height="30" fill="black"/>
 				<rect id="counter" class="rotator" x="10" y="40" width="30" height="30" fill="black"/>
 				<rect id="clock" class="rotator" x="130" y="40" width="30" height="30" fill="black"/>
@@ -155,16 +202,58 @@ a:visited {
 				<path id="counter" class="rotator" d="M 130 40 L 130 10 A 30 30 0 0 1 160 40 Z" fill="black"/>
 				<path id="clock" class="rotator" d="M 190 40 L 160 40 A 30 30 0 0 1 190 10 Z" fill="black"/>
 			</svg>
+            
+            <!-- <p class="name-text" style="text-align: center; font-family: 'IBM Plex Mono'; font-size: 1.2rem; color: black; margin-top: -80px;">
+                Dominic Rishe
+            </p> -->
 
-			<p class="status-text">
-				<a href="/portfolio">Portfolio</a> / 
-				<a href="/garden">Garden</a> / 
-				<a href="/market">Market</a> / 
-				<a href="/about">About</a>
-	  
-			  </p>
+            <img id="slideshow" src={lud.src} alt="Description of image" style="display: block; margin: 0px auto; width: 300px; height: auto;">
+
+            <div class="headline">
+                <p>
+                    Dom Rishe is a designer, engineer, and creative technologist.
+                </p>
+                <p>
+                    He's spent the last year exploring the intersections of traditional craft and emerging digital cultures as part of a Master's program at the Rhode Island School of Design. This research culminated in his thesis project 
+                    <a href="https://publications.risdmuseum.org/grad-show-2024-industrial-design/dominic-rishe">
+                    <span class="link">One of One of A Kind</span></a>, a collection of long-form generative objects and an accompanying series of essays on the social and cultural possibilites afforded by new digital tools like AI, blockchain, generative design, and digital fabrication. 
+                </p>
+                <p>
+                    Previously he worked as an engineer developing communications systems for ships and helicopters.
+                </p>
+                <p>
+                    For the summer of 2024 he is participating in the Digital Stone Project in Garfagnana, Italy.
+                </p>
+                <p style="margin-top: 50px; margin-bottom: 50px;"> +++ </p>
+
+                <p style="margin-bottom: 20px;">
+                    CONNECT
+                </p>
+                <p>
+                    <a href="https://drive.google.com/file/d/1jntKY1r28zIzwDetaXiyVlXfAhZCJf2u/view?usp=share_link">Resume/CV</a>
+                </p>
+                <div class="social-media">
+                    <a href="https://www.linkedin.com/in/dominic-rishe-03501381/" target="_blank">
+                        <img src={li.src} alt="LinkedIn">
+                    </a>
+                    <a href="https://www.instagram.com/nouveau_rishe" target="_blank">
+                        <img src={ig.src} alt="Instagram">
+                    </a>
+                    <a href="https://warpcast.com/onchaindom.eth" target="_blank">
+                        <img src={fc.src} alt="Farcaster">
+                    </a>
+                    <a href="https://zora.co/@onchaindom" target="_blank">
+                        <img src={zora.src} alt="Zora">
+                    </a>
+                    <a href="https://twitter.com/nouveau_rishe" target="_blank">
+                        <img src={x.src} alt="X">
+                    </a>
+                </div>
+            </div>
+
 			
 		</body>
+
 
 </MainLayout>
 
