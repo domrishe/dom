@@ -8,6 +8,14 @@ import fc from '../media/fc_logo.svg';
 import x from '../media/x.png';
 import li from '../media/li.svg';
 import zora from '../media/zorb.png';
+
+import camo from '../media/camo.jpeg';
+import smc from '../media/smc.jpeg';
+import gold from '../media/gold.png';
+import table from '../media/table.png';
+import quilt from '../media/q.jpeg';
+
+import ex_1 from '../media/ex_1.png';
 ---
 
 <EmptyLayout title="Dom">
@@ -79,7 +87,22 @@ import zora from '../media/zorb.png';
 			transform-box: fill-box;
 			transform-origin: 50% 50%;
 		}
-		
+
+        .slideshow-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 500px; /* Set a fixed height for the container */
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        #slideshow {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain; /* Maintain aspect ratio and fit within the container */
+        }
+                
 		#clock {
 	animation: rotate-clockwise 5.75s cubic-bezier(0.42, 0, 0.58, 1) infinite;
 }
@@ -207,11 +230,13 @@ a:visited {
                 Dominic Rishe
             </p> -->
 
-            <img id="slideshow" src={lud.src} alt="Description of image" style="display: block; margin: 0px auto; width: 300px; height: auto;">
+            <div class="slideshow-container">
+                <img id="slideshow" src={lud.src} alt="Description of image">
+              </div>
 
             <div class="headline">
                 <p>
-                    Dom Rishe is a designer, engineer, and creative technologist.
+                    Dom Rishe is a designer, engineer, creative technologist, and craftsperson.
                 </p>
                 <p>
                     He's spent the last year exploring the intersections of traditional craft and emerging digital cultures as part of a Master's program at the Rhode Island School of Design. This research culminated in his thesis project 
@@ -224,7 +249,7 @@ a:visited {
                 <p>
                     For the summer of 2024 he is participating in the Digital Stone Project in Garfagnana, Italy.
                 </p>
-                <p style="margin-top: 50px; margin-bottom: 50px;"> +++ </p>
+                <p style="margin-top: 50px; margin-bottom: 50px; "> & </p>
 
                 <p style="margin-bottom: 20px;">
                     CONNECT
@@ -253,6 +278,33 @@ a:visited {
 
 			
 		</body>
+
+        <script define:vars={{ lud, iac, table, camo, gold, smc, quilt, ex_1 }}>
+            // Array of imported images
+            const images = [
+              { src: lud.src, alt: 'Description of lud' },
+              { src: iac.src, alt: 'Description of iac' },
+              { src: table.src, alt: 'Description of iac' },
+              { src: camo.src, alt: 'Description of iac' },
+              { src: gold.src, alt: 'Description of iac' },
+              { src: smc.src, alt: 'Description of iac' },
+              { src: quilt.src, alt: 'Description of iac' },
+              { src: ex_1.src, alt: 'Description of iac' }
+            ];
+          
+            let currentIndex = 0;
+            const slideshowElement = document.getElementById('slideshow');
+          
+            function changeImage() {
+              currentIndex = (currentIndex + 1) % images.length;
+              const { src, alt } = images[currentIndex];
+              slideshowElement.src = src;
+              slideshowElement.alt = alt;
+            }
+          
+            // Change image every 3 seconds
+            setInterval(changeImage, 3000);
+          </script>
 
 
 </MainLayout>
