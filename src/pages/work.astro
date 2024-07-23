@@ -1,8 +1,11 @@
 ---
 import EmptyLayout from '../layouts/Layout.astro';
 
-import iac from '../media/iac.gif';
-import lud from '../media/lud1.gif';
+import lp3 from '../media/Projects/lepta/lepta_3.png';
+import mr from '../media/Projects/myrisd/myRISD.gif';
+import w2 from '../media/Projects/weather/w_2.gif';
+
+
 import ig from '../media/Instagram_Glyph_Black.svg';
 import fc from '../media/fc_logo.svg';
 import x from '../media/x.png';
@@ -62,7 +65,7 @@ import ex_1 from '../media/ex_1.png';
         /* font-family: "Georgia", monospace;
         font-weight: 10; */
         font-size: 1rem;
-        margin: 77px auto;
+        margin: 33px auto;
         max-width: 600px; /* Adjust this width as needed */
         color: #272520;
 
@@ -230,36 +233,50 @@ a:visited {
                 Dominic Rishe
             </p> -->
 
-            <div class="slideshow-container">
-                <img id="slideshow" src={lud.src} alt="Description of image">
-              </div>
-
             <div class="headline">
                 <p>
-                   Dom Rishe is a designer, engineer, creative technologist, and craftsperson.
+                    DOMINIC RISHE is a designer, engineer, and creative technologist.
                 </p>
                 <p>
-                    He's spent the last year exploring the intersections of traditional craft and emerging digital cultures as part of a Master's program at the Rhode Island School of Design. This research culminated in his thesis project 
-                    <a href="https://publications.risdmuseum.org/grad-show-2024-industrial-design/dominic-rishe">
-                    <span class="link">One of One of A Kind</span></a>, a collection of long-form generative objects and an accompanying series of essays on the social and cultural possibilities afforded by new digital tools like AI, blockchain, generative design, and digital fabrication. 
+                    He’s spent the last two years at the Rhode Island School of Design exploring the social and cultural possibilities afforded by new digital technologies like blockchains, AI, and digital fabrication.
                 </p>
                 <p>
-                    His work looks for a synthesis of old and new, digital and physical, technical and meaningful, and covers a wide range of media – from furniture to NFTs, textiles to interactive AI tools, working with marble to working with DAOs. 
-                </p>
-                <p>
-                    Previously he worked as an engineer developing communication systems, mixed reality training applications, and networks for ships, helicopters, and armored vehicles.
-                </p>
-                <p>
-                    For the summer of 2024 he is participating in the Digital Stone Project in Garfagnana, Italy, and developing a project for Design Week Mexico Inédito.
+                    Previously he worked for several years as an engineer developing communication systems, mixed reality training applications, and networks for ships, helicopters, and armored vehicles.
                 </p>
                 <p style="margin-top: 50px; margin-bottom: 50px; "> & </p>
+                <div class="work">
+                    
+                <p>
+                    Learn more about his experience here:
 
+                    <p>
+                        <a href="https://drive.google.com/file/d/1jntKY1r28zIzwDetaXiyVlXfAhZCJf2u/view?usp=share_link">Resume/CV</a>
+                    </p>
+
+                
+                    <p style="margin-top: 50px; margin-bottom: 50px; "> & </p>
+                </p>
+                <p>
+                    Selected Design Work:
+                </p>
+
+                <div class="slideshow-container">
+                    <img id="slideshow" src={lp3.src} alt="Description of image">
+                  </div>
+
+                  <div class="slideshow-container">
+                    <img id="slideshow" src={mr.src} alt="Description of image">
+                  </div>
+
+                  <div class="slideshow-container">
+                    <img id="slideshow" src={w2.src} alt="Description of image">
+                  </div>
+
+                <p style="margin-top: 50px; margin-bottom: 50px; "> & </p>
                 <p style="margin-bottom: 20px;">
                     CONNECT
                 </p>
-                <p>
-                    <a href="https://drive.google.com/file/d/1jntKY1r28zIzwDetaXiyVlXfAhZCJf2u/view?usp=share_link">Resume/CV</a>
-                </p>
+
                 <div class="social-media">
                     <a href="https://www.linkedin.com/in/dominic-rishe-03501381/" target="_blank">
                         <img src={li.src} alt="LinkedIn">
@@ -282,32 +299,6 @@ a:visited {
 			
 		</body>
 
-        <script define:vars={{ lud, iac, table, camo, gold, smc, quilt, ex_1 }}>
-            // Array of imported images
-            const images = [
-              { src: lud.src, alt: 'Description of lud' },
-              { src: iac.src, alt: 'Description of iac' },
-              { src: table.src, alt: 'Description of iac' },
-              { src: camo.src, alt: 'Description of iac' },
-              { src: gold.src, alt: 'Description of iac' },
-              { src: smc.src, alt: 'Description of iac' },
-              { src: quilt.src, alt: 'Description of iac' },
-              { src: ex_1.src, alt: 'Description of iac' }
-            ];
-          
-            let currentIndex = 0;
-            const slideshowElement = document.getElementById('slideshow');
-          
-            function changeImage() {
-              currentIndex = (currentIndex + 1) % images.length;
-              const { src, alt } = images[currentIndex];
-              slideshowElement.src = src;
-              slideshowElement.alt = alt;
-            }
-          
-            // Change image every 3 seconds
-            setInterval(changeImage, 3000);
-          </script>
 
 
 </MainLayout>
