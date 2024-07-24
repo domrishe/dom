@@ -72,6 +72,8 @@ import sc from '../media/sc.png';
             padding-top: 50px;
             box-sizing: border-box;
             margin-top: -100px;
+ 
+            overflow: hidden;
 
         }
 
@@ -80,6 +82,9 @@ import sc from '../media/sc.png';
             display: flex;
             align-items: center;
             justify-content: center;
+            min-height: 0;
+
+            height: calc(33.33vh - 20px);
 
             
         }
@@ -119,15 +124,15 @@ import sc from '../media/sc.png';
             overflow: auto;
             padding-top: 40px;
             padding-bottom: 200px;
-            /* line-height: 6rem; */
-            /* color: yellow; */
-            /* filter: blur(8px); */
+
         }
 
 
         @media (max-width: 768px) {
     .container {
         grid-template-columns: repeat(3, 1fr);
+        height: 75%;
+        margin-top: -40px;
         gap: 50px;
     }
 
