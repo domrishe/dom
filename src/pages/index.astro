@@ -1,8 +1,7 @@
 ---
 import EmptyLayout from '../layouts/Layout.astro';
 
-import iac from '../media/iac.gif';
-import lud from '../media/lud1.gif';
+
 import ig from '../media/Instagram_Glyph_Black.svg';
 import fc from '../media/fc_logo.svg';
 import x from '../media/x.png';
@@ -14,8 +13,21 @@ import smc from '../media/smc.jpeg';
 import gold from '../media/gold.png';
 import table from '../media/table.png';
 import quilt from '../media/q.jpeg';
-
+import iac from '../media/iac.gif';
+import lud from '../media/lud1.gif';
 import ex_1 from '../media/ex_1.png';
+import w4 from '../media/Projects/weather/w_4.gif';
+import gan from '../media/gan.gif';
+import gp6 from '../media/gp_6.jpg';
+import mr from '../media/Projects/myrisd/myRISD.gif';
+import ind from '../media/in.jpeg';
+import ar from '../media/ar.gif';
+import dd from '../media/dd_1.jpg';
+import ta from '../media/table_anim.gif';
+import lf from '../media/lf.png';
+import b from '../media/b.jpg';
+import dr from '../media/droste.gif';
+import sc from '../media/sc.png';
 ---
 
 <EmptyLayout title="Dom">
@@ -33,42 +45,129 @@ import ex_1 from '../media/ex_1.png';
 
 
 		svg {
-			/* border: solid red; */
 			display: block;
 			margin: auto;
-		
 		}
+
 		
 		body {
 			background-color: #F4F0EC;
-		
 		}
 
-        .link {
-        font-weight: 500;
-        font-style: normal;
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            height: 100vh;
+            width: 100vw;
+            /* height: 60vh; */
+            position: relative;
+            gap: 0px;
+            padding-top: 50px;
+            box-sizing: border-box;
+            margin-top: -100px;
+
+        }
+
+        .grid-item {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            
+        }
+        .grid-item img {
+            width: 90%;
+            height: 60%;
+            object-fit: contain;
+        }
+
+        .overlay {
+            position: relative;
+            z-index: 2;
         }
 
         .eb-garamond-unique {
         font-family: "EB Garamond", serif;
         font-optical-sizing: auto;
-        font-weight: 600; /* Adjust the weight as needed */
+        font-weight: 600; 
         font-style: normal;
         }
+
+        .overlay-text {
+            font-family: "EB Garamond", serif;
+            font-optical-sizing: auto;
+            font-weight: 1000; /* Adjust the weight as needed */
+            font-style: italic;
+            font-size: 5rem;
+            margin: auto;
+            text-align: center;
+            
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: auto;
+            padding-top: 40px;
+            padding-bottom: 200px;
+            /* line-height: 6rem; */
+            /* color: yellow; */
+            /* filter: blur(8px); */
+        }
+
+
+        @media (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
+    }
+
+    .overlay-text {
+        font-size: 3rem;
+    }
+
+}
+
+
+
 
 
         .headline {
         text-align: center;
-        /* font-family: "Georgia", monospace;
-        font-weight: 10; */
         font-size: 1rem;
         margin: 77px auto;
-        max-width: 600px; /* Adjust this width as needed */
+        max-width: 600px; 
         color: #272520;
 
         font-family: "EB Garamond", serif;
         font-optical-sizing: auto;
-        font-weight: 400; /* Adjust the weight as needed */
+        font-weight: 400; 
+        font-style: italic;
+        }
+
+        .footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 1rem;
+        margin: 20px auto;
+        max-width: 600px; 
+        color: #272520;
+
+        font-family: "EB Garamond", serif;
+        font-optical-sizing: auto;
+        font-weight: 400; 
         font-style: italic;
         }
 
@@ -87,29 +186,14 @@ import ex_1 from '../media/ex_1.png';
 			transform-box: fill-box;
 			transform-origin: 50% 50%;
 		}
-
-        .slideshow-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 500px; /* Set a fixed height for the container */
-            margin: 0 auto;
-            width: 100%;
-        }
-
-        #slideshow {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain; /* Maintain aspect ratio and fit within the container */
-        }
                 
 		#clock {
-	animation: rotate-clockwise 9s cubic-bezier(0.42, 0, 0.58, 1) infinite;
-}
+	    animation: rotate-clockwise 9s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+        }
 
-#counter {
-	animation: rotate-counter-clockwise 9s cubic-bezier(0.42, 0, 0.58, 1) infinite;
-}
+        #counter {
+            animation: rotate-counter-clockwise 9s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+        }
 		
 		#bg {
 			/* animation: switch 14s infinite step-end; */
@@ -184,24 +268,6 @@ import ex_1 from '../media/ex_1.png';
 			
 		}
 
-		.status-text {
-    font-family: 'Compagnon Medium';
-    line-height: 1rem;
-    font-size: 0.9rem;
-	text-align: center;
-	color: black;
-
-}
-
-.status-text a {
-  text-decoration: underline;
-  color: black;
-}
-
-.status-text a:hover {
-  font-style: italic;
-  cursor: pointer;
-}
 
 a:visited {
 	color: black
@@ -211,32 +277,55 @@ a:visited {
 		</head>
 		<body id="bg">
 		
-			<svg viewBox="0 0 200 80" style="width:200px; height:200px; transform: scale(0.70); transform-origin: center;">
-				<rect id="clock" class="rotator" x="10" y="10" width="30" height="30" fill="black"/>
-				<rect id="counter" class="rotator" x="10" y="40" width="30" height="30" fill="black"/>
-				<rect id="clock" class="rotator" x="130" y="40" width="30" height="30" fill="black"/>
-				<rect id="counter" class="rotator" x="160" y="40" width="30" height="30" fill="black"/>
-				<path id="counter" class="rotator" d="M 40 40 L 70 40 A 30 30 0 0 0 40 10 Z" fill="black"/>
-				<path id="clock" class="rotator" d="M 40 40 L 70 40 A 30 30 0 0 1 40 70 Z" fill="black"/>
-				<path id="counter" class="rotator" d="M 100 40 L 70 40 A 30 30 0 0 1 100 10 Z" fill="black"/>
-				<path id="clock" class="rotator" d="M 100 40 L 130 40 A 30 30 0 0 0 100 10 Z" fill="black"/>
-				<path id="counter" class="rotator" d="M 100 40 L 130 40 A 30 30 0 0 1 100 70 Z" fill="black"/>
-				<path id="clock" class="rotator" d="M 100 40 L 70 40 A 30 30 0 0 0 100 70 Z" fill="black"/>
-				<path id="counter" class="rotator" d="M 130 40 L 130 10 A 30 30 0 0 1 160 40 Z" fill="black"/>
-				<path id="clock" class="rotator" d="M 190 40 L 160 40 A 30 30 0 0 1 190 10 Z" fill="black"/>
+			<svg viewBox="0 0 200 80" style="width:200px; height:100px; transform: scale(0.70); transform-origin: center;">
+				<rect id="clock" class="rotator" x="10" y="10" width="30" height="30" fill="#black"/>
+				<rect id="counter" class="rotator" x="10" y="40" width="30" height="30" fill="#black"/>
+				<rect id="clock" class="rotator" x="130" y="40" width="30" height="30" fill="#black"/>
+				<rect id="counter" class="rotator" x="160" y="40" width="30" height="30" fill="#black"/>
+				<path id="counter" class="rotator" d="M 40 40 L 70 40 A 30 30 0 0 0 40 10 Z" fill="#black"/>
+				<path id="clock" class="rotator" d="M 40 40 L 70 40 A 30 30 0 0 1 40 70 Z" fill="#black"/>
+				<path id="counter" class="rotator" d="M 100 40 L 70 40 A 30 30 0 0 1 100 10 Z" fill="#black"/>
+				<path id="clock" class="rotator" d="M 100 40 L 130 40 A 30 30 0 0 0 100 10 Z" fill="#black"/>
+				<path id="counter" class="rotator" d="M 100 40 L 130 40 A 30 30 0 0 1 100 70 Z" fill="#black"/>
+				<path id="clock" class="rotator" d="M 100 40 L 70 40 A 30 30 0 0 0 100 70 Z" fill="#black"/>
+				<path id="counter" class="rotator" d="M 130 40 L 130 10 A 30 30 0 0 1 160 40 Z" fill="#black"/>
+				<path id="clock" class="rotator" d="M 190 40 L 160 40 A 30 30 0 0 1 190 10 Z" fill="#black"/>
 			</svg>
+
+
+
+            <div class="container">
+                <div class="grid-item"><img src={lud.src} alt="Grid Image 1"></div>
+                <div class="grid-item overlay"><img src={camo.src} alt="Grid Image 2"></div>
+                <div class="grid-item"><img src={smc.src} alt="Overlay Image 1"></div>
+                <div class="grid-item"><img src={table.src} alt="Grid Image 4"></div>
+                <div class="grid-item"><img src={gold.src} alt="Grid Image 6"></div>
+                <div class="grid-item overlay"><img src={iac.src} alt="Grid Image 5"></div>
+                
+                <div class="grid-item"><img src={quilt.src} alt="Grid Image 7"></div>
+                <div class="grid-item"><img src={ex_1.src} alt="Grid Image 8"></div>
+                <div class="grid-item overlay"><img src={gan.src} alt="Overlay Image 2"></div>
+                <div class="grid-item"><img src={w4.src} alt="Grid Image 9"></div>
+                <div class="grid-item"><img src={gp6.src} alt="Grid Image 11"></div>
+                <div class="grid-item overlay"><img src={ind.src} alt="Grid Image 12"></div>
+                <div class="grid-item"><img src={mr.src} alt="Grid Image 12"></div>
+                
+                <div class="grid-item"><img src={ar.src} alt="Grid Image 12"></div>
+                <div class="grid-item"><img src={dd.src} alt="Grid Image 12"></div>
+                <div class="grid-item"><img src={ta.src} alt="Grid Image 12"></div>
+                <div class="grid-item overlay"><img src={b.src} alt="Grid Image 12"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"><img src={lf.src} alt="Grid Image 12"></div>
+                <div class="grid-item"><img src={dr.src} alt="Grid Image 12"></div>
+                <div class="grid-item"><img src={sc.src} alt="Grid Image 12"></div>
+                
+            </div>
+
+
             
-            <!-- <p class="name-text" style="text-align: center; font-family: 'IBM Plex Mono'; font-size: 1.2rem; color: black; margin-top: -80px;">
-                Dominic Rishe
-            </p> -->
-
-            <div class="slideshow-container">
-                <img id="slideshow" src={lud.src} alt="Description of image">
-              </div>
-
-            <div class="headline">
+            <div class="overlay-text">
                 <p>
-                   Dom Rishe is a designer, engineer, creative technologist, and craftsperson.
+                    Dominic Rishe is a designer, engineer, creative technologist, and craftsperson.
                 </p>
                 <p>
                     He's spent the last year exploring the intersections of traditional craft and emerging digital cultures as part of a Master's program at the Rhode Island School of Design. This research culminated in his thesis project 
@@ -252,13 +341,22 @@ a:visited {
                 <p>
                     For the summer of 2024 he is participating in the Digital Stone Project in Garfagnana, Italy, and developing a project for Design Week Mexico Inédito.
                 </p>
-                <p style="margin-top: 50px; margin-bottom: 50px; "> & </p>
+            </div>
+
+
+
+            <footer class="footer">
+
+                <p style="margin-top: 30px; margin-bottom: 30px; "> & </p>
 
                 <p style="margin-bottom: 20px;">
                     CONNECT
                 </p>
                 <p>
-                    <a href="https://drive.google.com/file/d/1jntKY1r28zIzwDetaXiyVlXfAhZCJf2u/view?usp=share_link">Resume/CV</a>
+                    <a href="https://drive.google.com/file/d/1jntKY1r28zIzwDetaXiyVlXfAhZCJf2u/view?usp=share_link" target="_blank">Resume/CV</a>
+                </p>
+                <p>
+                    <a href="/ux/">Digital Products Portfolio</a>
                 </p>
                 <div class="social-media">
                     <a href="https://www.linkedin.com/in/dominic-rishe-03501381/" target="_blank">
@@ -277,37 +375,15 @@ a:visited {
                         <img src={x.src} alt="X">
                     </a>
                 </div>
-            </div>
+            </footer>
+
+
+
+
 
 			
 		</body>
 
-        <script define:vars={{ lud, iac, table, camo, gold, smc, quilt, ex_1 }}>
-            // Array of imported images
-            const images = [
-              { src: lud.src, alt: 'Description of lud' },
-              { src: iac.src, alt: 'Description of iac' },
-              { src: table.src, alt: 'Description of iac' },
-              { src: camo.src, alt: 'Description of iac' },
-              { src: gold.src, alt: 'Description of iac' },
-              { src: smc.src, alt: 'Description of iac' },
-              { src: quilt.src, alt: 'Description of iac' },
-              { src: ex_1.src, alt: 'Description of iac' }
-            ];
-          
-            let currentIndex = 0;
-            const slideshowElement = document.getElementById('slideshow');
-          
-            function changeImage() {
-              currentIndex = (currentIndex + 1) % images.length;
-              const { src, alt } = images[currentIndex];
-              slideshowElement.src = src;
-              slideshowElement.alt = alt;
-            }
-          
-            // Change image every 3 seconds
-            setInterval(changeImage, 3000);
-          </script>
 
 
 </MainLayout>
