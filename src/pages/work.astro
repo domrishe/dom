@@ -10,7 +10,7 @@ import lp5 from '../media/Projects/lepta/lepta_2.gif';
 
 import mr from '../media/Projects/myrisd/myRISD.gif';
 
-import cb1 from '../media/cb1.png';
+import cb3 from '../media/cb3.png';
 import cb2 from '../media/cb2.png';
 
 import w2 from '../media/Projects/weather/w_2.gif';
@@ -120,6 +120,14 @@ import ex_1 from '../media/ex_1.png';
 			transform-origin: 50% 50%;
 		}
 
+        .and {
+            font-size: 2rem;
+        }
+
+        #intro {
+            font-weight: 600;
+        }
+
         .slideshow-container {
             display: flex;
             flex-direction: column;
@@ -128,6 +136,7 @@ import ex_1 from '../media/ex_1.png';
             height: 500px; /* Set a fixed height for the container */
             margin: 0 auto;
             margin-bottom: 50px;
+            margin-top: 50px;
             width: 100%;
             max-width: 600px;
         }
@@ -276,31 +285,17 @@ a:visited {
             </p> -->
 
             <div class="headline">
-                <div class="blurbs">
+                <div class="blurbs" id="intro">
                 <p>
-                    DOMINIC RISHE is a designer, engineer, and creative technologist.
+                    As a designer, I'm a committed generalist, and my work spans a wide breadth of media, technique, and concept. This page is a collection of projects specifically in the realm of digital product design.
                 </p>
                 <p>
-                    He’s spent the last two years at the Rhode Island School of Design exploring the social and cultural possibilities afforded by new digital technologies like blockchains, AI, and digital fabrication.
-                </p>
-                <p>
-                    Previously he worked for several years as an engineer developing communication systems, mixed reality training applications, and networks for ships, helicopters, and armored vehicles.
+                    In this realm I've explored my interests in crypto as a social good, generative visual experiences through color, and AI. Beyond prototyping with Figma and Framer, I've done some development as well — writing smart contracts on Algorand, using Python for training AI models, and doing basic front-end development with HTML, CSS, and JS.
                 </p>
                 <div class="work">
-                    
-                <p style="margin-top: 50px; ">
-                    Learn more about his experience here:
-
-                    <p>
-                        <a href="https://drive.google.com/file/d/1jntKY1r28zIzwDetaXiyVlXfAhZCJf2u/view?usp=share_link">Resume/CV</a>
-                    </p>
 
                 
-                    <p style="margin-top: 50px; margin-bottom: 50px; "> & </p>
-                </p>
-                <p style="margin-top: 50px; margin-bottom: 50px; ">
-                    SELECTED DESIGN WORK:
-                </p>
+                    <p class="and" style="margin-top: 50px; margin-bottom: 50px; "> & </p>
                 </div>
                 </div>
 
@@ -419,10 +414,13 @@ a:visited {
                         <p>
                             At this time the easiest way to train a Stable Diffusion model was to use a Google Colab notebook to get access to remote GPU time. I forked one I found online and modified the code to do some prompt injection that would make all outputs black and white line drawings in the style of a coloring book.
                         </p>
+                        <p>
+                           <a href="https://github.com/domrishe/SD-coloring-book">View the Colab Notebook here</a>
+                        </p>
                     </div>
                 <div class="slideshow-container">
-                    <img id="slideshow" src={cb1.src} alt="Description of image">
-                    <span class="caption" style="margin-left: 230px;">+ walkthrough</span>
+                    <img id="slideshow" src={cb3.src} alt="Description of image">
+                    <span class="caption" style="margin-left: 60px;">+ interface</span>
                 </div>
                 <div class="slideshow-container">
                     <img id="slideshow" src={cb2.src} alt="Description of image">
