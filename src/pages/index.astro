@@ -130,14 +130,24 @@ import sc from '../media/sc.png';
 
         @media (max-width: 768px) {
     .container {
-        grid-template-columns: repeat(3, 1fr);
-        height: 75%;
+        grid-template-columns: repeat(5, 20%);
+        grid-template-rows: repeat(5, 20%);
+        height: 85%;
         margin-top: -40px;
-        gap: 50px;
+        gap: 0px;
+        
+    }
+    .grid-item {
+        height: 50%;
     }
 
     .overlay-text {
         font-size: 3rem;
+        line-height: 2.7rem;
+    }
+
+    #hide {
+        filter: opacity(0);
     }
 
 }
@@ -275,10 +285,14 @@ import sc from '../media/sc.png';
 
 
 a:visited {
-	color: black
+	color: black;
 }
 		
 			</style>
+
+
+
+
 		</head>
 		<body id="bg">
 		<a href="/">
@@ -322,7 +336,7 @@ a:visited {
                 <div class="grid-item"></div>
                 <div class="grid-item"><img src={lf.src} alt="Grid Image 12"></div>
                 <div class="grid-item"><img src={dr.src} alt="Grid Image 12"></div>
-                <div class="grid-item"><img src={sc.src} alt="Grid Image 12"></div>
+                <div class="grid-item" id="hide"><img src={sc.src} alt="Grid Image 12"></div>
                 
             </div>
 
