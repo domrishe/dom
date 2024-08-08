@@ -1,0 +1,41 @@
+.main-header {
+   padding: 20px; /* Space around the content */
+   position: fixed; /* Fix the header to the top of the page */
+   top: 0; /* Align it to the top of the viewport */
+   left: 0;
+   right: 0;
+   /* width: 100%;  */
+   z-index: 1000;
+}
+
+.navigation {
+   display: flex; /* Use flexbox to align items horizontally */
+   justify-content: space-between; /* Space between links */
+   align-items: center; /* Center links vertically */
+}
+
+.navigation ul {
+   list-style: none; /* Remove default list styling */
+   margin: 0;
+   padding: 0;
+   display: flex; /* Align items horizontally */
+   gap: 20px; /* Space between links */
+}
+
+.nav-link {
+   text-decoration: none; /* Remove underline */
+   color: black; /* Link color */
+   font-family: 'IBM Plex Mono', sans-serif; /* Font style */
+   /* font-style: italic; */
+   font-size: 1rem; /* Font size */
+   transition: color 0.3s ease; /* Smooth transition on hover */
+}
+
+.nav-link:hover {
+   text-transform: lowercase;
+}
+
+
+.nav-links-right {
+   margin-left: auto; /* Push the right links to the right side */
+}

@@ -1,0 +1,347 @@
+---
+import EmptyLayout from '../layouts/Layout.astro';
+import '../styles/basic-grid.css';
+import '../styles/header.css';
+
+
+import ig from '../media/Instagram_Glyph_Black.svg';
+import fc from '../media/fc_logo.svg';
+import x from '../media/x.png';
+import li from '../media/li.svg';
+import zora from '../media/zorb.png';
+
+import camo from '../media/camo.jpeg';
+import smc from '../media/smc.jpeg';
+import gold from '../media/gold.png';
+import co from '../media/co_2.png';
+import quilt from '../media/q.jpeg';
+import iac from '../media/iac.gif';
+import lud from '../media/lud1.gif';
+import ex_1 from '../media/ex_1.png';
+import w4 from '../media/Projects/weather/w_4.gif';
+import gan from '../media/gan.gif';
+import gp6 from '../media/gp_6.jpg';
+import mr from '../media/Projects/myrisd/myRISD.gif';
+import ind from '../media/in.jpeg';
+import ar from '../media/ar.gif';
+import dd from '../media/dd_1.jpg';
+import ta from '../media/table_anim.gif';
+import lf from '../media/lf.png';
+import b from '../media/b.jpg';
+import dr from '../media/droste.gif';
+import sc from '../media/sc.png';
+import grow7 from '../media/Projects/grow/grow7.jpg';
+---
+
+<EmptyLayout title="Dom">
+
+    <style>
+		@font-face {
+    font-family: 'Compagnon Medium';
+    src: url('/fonts/Comp/Compagnon-Medium.eot') format('eot'),
+         url('/fonts/Comp/Compagnon-Medium.woff') format('woff'),
+         url('/fonts/Comp/Compagnon-Medium.woff2') format('woff2');
+    font-weight: medium;
+    font-style: medium;
+  }
+
+
+
+		svg {
+			display: block;
+			margin: auto;
+		}
+
+		
+		body {
+			background-color: #F4F0EC;
+		}
+
+        body, html {
+            margin: 0;
+            padding-top: 1rem;
+            height: 100%;
+            /* overflow: hidden; */
+        }
+
+        #name {
+            text-transform: uppercase;
+            font-style: normal;
+            font-family: 'IBM Plex Mono', sans-serif;
+            font-weight: 100;
+            font-size: 4.5rem;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            height: 100vh;
+            width: 100vw;
+            /* height: 60vh; */
+            position: relative;
+            gap: 0px;
+            padding-top: 100px;
+            box-sizing: border-box;
+            margin-top: -100px;
+ 
+            overflow: hidden;
+
+            /* filter: saturate(0%); */
+
+        }
+
+        /* .grid-item {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 0;
+            padding-left: 20%;
+            padding-right: 20%;
+
+            height: calc(33.33vh - 20px);
+
+            
+        } */
+        .grid-item img {
+            width: 90%;
+            height: 60%;
+            object-fit: contain;
+        }
+
+        .overlay {
+            position: relative;
+            z-index: 2;
+        }
+
+        .eb-garamond-unique {
+        font-family: "EB Garamond", serif;
+        font-optical-sizing: auto;
+        font-weight: 600; 
+        font-style: normal;
+        }
+
+
+
+
+
+
+        .headline {
+        text-align: center;
+        font-size: 1rem;
+        margin: 77px auto;
+        max-width: 600px; 
+        color: #272520;
+
+        font-family: "EB Garamond", serif;
+        font-optical-sizing: auto;
+        font-weight: 400; 
+        font-style: italic;
+        }
+
+        .footer {
+        /* position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0; */
+        text-align: center;
+        font-size: 1rem;
+        margin: 50px auto;
+        max-width: 600px; 
+        color: #272520;
+
+        font-family: "EB Garamond", serif;
+        font-optical-sizing: auto;
+        font-weight: 400; 
+        font-style: italic;
+        }
+
+        .social-media {
+            padding-bottom: 50px;
+        }
+
+
+        .social-media a {
+            margin: 0 10px;
+            display: inline-block;
+        }
+
+        .social-media img {
+            width: 20px;
+            height: 20px;
+        }
+		
+		.rotator {
+			transform-box: fill-box;
+			transform-origin: 50% 50%;
+		}
+                
+		#clock {
+	    animation: rotate-clockwise 9s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+        }
+
+        #counter {
+            animation: rotate-counter-clockwise 9s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+        }
+		
+		#bg {
+			/* animation: switch 14s infinite step-end; */
+		}
+		
+		@keyframes rotate-clockwise {
+    0%, 10% {
+        transform: rotate(0deg);
+    }
+    10%, 20% {
+        transform: rotate(90deg);
+    }
+    20%, 30% {
+        transform: rotate(90deg);
+    }
+    30%, 40% {
+        transform: rotate(180deg);
+    }
+    40%, 50% {
+        transform: rotate(180deg);
+    }
+    50%, 60% {
+        transform: rotate(270deg);
+    }
+    60%, 80% {
+        transform: rotate(270deg);
+    }
+    80%, 100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+@keyframes rotate-counter-clockwise {
+    0%, 10% {
+        transform: rotate(0deg);
+    }
+    10%, 20% {
+        transform: rotate(-90deg);
+    }
+    20%, 30% {
+        transform: rotate(-90deg);
+    }
+    30%, 40% {
+        transform: rotate(-180deg);
+    }
+    40%, 50% {
+        transform: rotate(-180deg);
+    }
+    50%, 60% {
+        transform: rotate(-270deg);
+    }
+    60%, 80% {
+        transform: rotate(-270deg);
+    }
+    80%, 100% {
+        transform: rotate(-360deg);
+    }
+}
+		
+		@keyframes switch {
+			0% {background-color: #B4ABFF;}
+			10% {background-color: #D8F4C3;}
+			22.5% {background-color: #EE8678;}
+			35% {background-color: #D9FEA3;}
+			47.5% {background-color: #FEEA73;}
+			60% {background-color: #35F2B0;}
+			72.5% {background-color: #31B5FF;}
+			85% {background-color: #F89CCC;}
+			97.5% {background-color: #B4ABFF;}
+		
+			
+		}
+
+
+a:visited {
+	color: inherit;
+}
+		
+			</style>
+
+
+
+
+		</head>
+		<body id="bg">
+
+
+            <header class="main-header">
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="/" class="nav-link">DOMINIC RISHE</a></li>
+                    </ul>
+                    <ul class="nav-links-right">
+                        <li><a href="/work/" class="nav-link">WORK</a></li>
+                        <!-- Add more links here if needed -->
+                    </ul>
+                </nav>
+            </header>
+
+
+            <div class="basic-grid">
+                <div class="grid-item">
+                    <a href="/grow/">
+                        <img src={grow7.src} alt="Grid Image 1">
+                    </a>
+                </div>
+                <div class="grid-item"><img src={camo.src} alt="Grid Image 2"></div>
+                <div class="grid-item"><img src={smc.src} alt="Overlay Image 1"></div>
+                <div class="grid-item"><img src={co.src} alt="Grid Image 12"></div>
+                <div class="grid-item"><img src={gan.src} alt="Overlay Image 2"></div>
+                <div class="grid-item"><img src={w4.src} alt="Grid Image 9"></div>
+                <div class="grid-item"><img src={iac.src} alt="Grid Image 5"></div>
+                <div class="grid-item"><img src={quilt.src} alt="Grid Image 7"></div>
+                <div class="grid-item"><img src={ex_1.src} alt="Grid Image 8"></div>
+                <div class="grid-item"><img src={gold.src} alt="Grid Image 6"></div>
+                <div class="grid-item"><img src={gp6.src} alt="Grid Image 11"></div>
+                <div class="grid-item"><img src={mr.src} alt="Grid Image 12"></div>
+                <div class="grid-item"><img src={ar.src} alt="Grid Image 12"></div>
+                <div class="grid-item"><img src={dd.src} alt="Grid Image 12"></div>
+                <div class="grid-item"><img src={b.src} alt="Grid Image 12"></div>
+                <div class="grid-item"><img src={lf.src} alt="Grid Image 12"></div>
+                <div class="grid-item"><img src={dr.src} alt="Grid Image 12"></div>
+
+                
+                
+            </div>
+
+
+            <footer class="footer">
+
+                <p style="margin-bottom: 20px;">
+                    CONNECT
+                </p>
+                <p>
+
+                </p>
+                <!-- <p>
+                    <a href="/ux/">Digital Products Portfolio</a>
+                </p> -->
+                <div class="social-media">
+                    <a href="https://drive.google.com/file/d/1jntKY1r28zIzwDetaXiyVlXfAhZCJf2u/view?usp=share_link" target="_blank">Resume/CV</a>
+                    <a href="https://www.linkedin.com/in/dominic-rishe-03501381/" target="_blank">
+                        <img src={li.src} alt="LinkedIn">
+                    </a>
+                    <a href="https://www.instagram.com/nouveau_rishe" target="_blank">
+                        <img src={ig.src} alt="Instagram">
+                    </a>
+                </div>
+            </footer>
+
+
+
+
+
+			
+		</body>
+
+
+
+</EmptyLayout>
+

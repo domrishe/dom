@@ -1,0 +1,21 @@
+.line {
+   height: 5px;
+   /* margin-left: 5px; */
+}
+
+.lvl1, .lvl2 {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   max-width: 400px;
+}
+
+.lvl2 {
+   margin-bottom: 2rem;
+}
+
+@media (max-width: 767px) {
+   .lvl1, .lvl2 {
+      max-width: 70vw;
+   }
+}

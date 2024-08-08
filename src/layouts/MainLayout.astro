@@ -5,13 +5,17 @@ export interface Props {
 
 import "../styles/base.css";
 
-import "../styles/vector.css";
+
+import ig from '../media/Instagram_Glyph_Black.svg';
+import fc from '../media/fc_logo.svg';
+import x from '../media/x.png';
+import li from '../media/li.svg';
+import zora from '../media/zorb.png';
 
 
 const { title } = Astro.props;
 ---
 
-<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -27,61 +31,29 @@ const { title } = Astro.props;
 		<link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;1,100&display=swap"
 			rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+
+		<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Fustat:wght@200..800&display=swap" rel="stylesheet">
 
 	</head>
 	<body>
 
-
-		<nav id="navbar">
-			<div id="main-title">
-				<a href="/index" class="nav-link">
-					<svg viewBox="0 0 200 80" style="width:120px; height:48px;">
-						<rect id="clock" class="rotator" x="10" y="10" width="30" height="30" fill="black" />
-						<rect id="counter" class="rotator" x="10" y="40" width="30" height="30" fill="black" />
-						<rect id="clock" class="rotator" x="130" y="40" width="30" height="30" fill="black" />
-						<rect id="counter" class="rotator" x="160" y="40" width="30" height="30" fill="black" />
-						<path id="counter" class="rotator" d="M 40 40 L 70 40 A 30 30 0 0 0 40 10 Z" fill="black" />
-						<path id="clock" class="rotator" d="M 40 40 L 70 40 A 30 30 0 0 1 40 70 Z" fill="black" />
-						<path id="counter" class="rotator" d="M 100 40 L 70 40 A 30 30 0 0 1 100 10 Z" fill="black" />
-						<path id="clock" class="rotator" d="M 100 40 L 130 40 A 30 30 0 0 0 100 10 Z" fill="black" />
-						<path id="counter" class="rotator" d="M 100 40 L 130 40 A 30 30 0 0 1 100 70 Z" fill="black" />
-						<path id="clock" class="rotator" d="M 100 40 L 70 40 A 30 30 0 0 0 100 70 Z" fill="black" />
-						<path id="counter" class="rotator" d="M 130 40 L 130 10 A 30 30 0 0 1 160 40 Z" fill="black" />
-						<path id="clock" class="rotator" d="M 190 40 L 160 40 A 30 30 0 0 1 190 10 Z" fill="black" />
-					</svg>
-							</a>
-		</div>
-			<ul id="navbar-list">
-				<li class="nav-item" id="garden">
-					<a href="/garden" class="nav-link" id="garden">
-						garden
-					</a>
-				</li>
-				<li class="nav-item" id="market">
-					<a href="/market" class="nav-link" id="market">
-						market
-					</a>
-				</li>
-				<li class="nav-item" id="portfolio">
-					<a href="/portfolio" class="nav-link" id="portfolio">
-						portfolio
-					</a>
-				</li>
-				<li class="nav-item" id="about">
-					<a href="/about" class="nav-link" id="about">
-						about
-					</a>
-				</li>
-			</ul>
-		</nav>
-
-
-
-
 		<slot />
 
-		<footer class="main-foot">
-			<p class="foot-tag">[Coded by hand with pleasure, pain, and <a href="https://astro.build/">Astro</a>.]</p>
-		</footer>
+		<div class="headline">
+			<p style="margin-bottom: 20px; margin-top:200px;">
+				CONNECT
+			</p>
+
+			<div class="social-media">
+				<a href="https://www.linkedin.com/in/dominic-rishe-03501381/" target="_blank">
+					<img src={li.src} alt="LinkedIn">
+				</a>
+				<a href="https://www.instagram.com/nouveau_rishe" target="_blank">
+					<img src={ig.src} alt="Instagram">
+				</a>
+			</div>
+  </div>
 	</body>
+
 </html>
