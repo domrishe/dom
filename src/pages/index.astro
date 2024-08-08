@@ -95,7 +95,7 @@ import t from '../media/table.png';
             font-optical-sizing: auto;
             font-weight: 100;
             font-style: italic;
-            font-size: 7rem;
+            font-size: 5.8rem;
             margin: auto;
             text-align: center;
             line-height: 7rem;
@@ -108,7 +108,11 @@ import t from '../media/table.png';
             margin: 0 10%;
             padding: 0;
             padding-bottom: 7rem;
+            color: transparent;
+            text-shadow: 0 0 10px rgba(0,0,0,0.5);
         }
+
+
 
 
 
@@ -197,12 +201,18 @@ import t from '../media/table.png';
     margin-right: 40vw;
 }
 
-#work-link {
+#work-link .noblur {
     font-family: 'IBM Plex Mono', sans-serif;
     font-style: normal;
+    text-decoration: underline;
     text-decoration-thickness: 2px;
     text-underline-offset: 5px;
     font-size: 3rem;
+}
+
+.noblur {
+    color: black;
+    text-shadow: none;
 }
 
 a {
@@ -230,6 +240,7 @@ button {
             text-decoration: underline;
             text-decoration-thickness: 1px;
             text-underline-offset: 3px;
+            color: blue;
         }
 
         @media (max-width: 768px) {
@@ -306,13 +317,13 @@ button {
             
             <div class="overlay-text">
                 <p>
-                    <span id="name">&#91;Dominic Rishe&#93;</span> is a designer, engineer, creative technologist, and craftsperson.
+                    <span id="name" class="noblur">&#91;Dominic Rishe&#93;</span><br> is a designer, engineer, creative technologist, and craftsperson.
                 </p>
-                <p>
+                <!-- <p>
                     He's spent the last year exploring the intersections of traditional craft and emerging digital cultures as part of a Master's program at the Rhode Island School of Design. This research culminated in his thesis project 
                     <a href="https://publications.risdmuseum.org/grad-show-2024-industrial-design/dominic-rishe" target="_blank">
                     <span class="link">One of One of A Kind</span></a>, a collection of long-form generative objects and an accompanying series of essays on the social and cultural possibilities afforded by new digital tools like AI, blockchain, generative design, and digital fabrication. 
-                </p>
+                </p> -->
                 <p>
                     His work looks for a synthesis of old and new, digital and physical, technical and meaningful, and covers a wide range of media – from furniture to NFTs, textiles to interactive AI tools, working with marble to working with DAOs. 
                 </p>
@@ -320,11 +331,11 @@ button {
                     Previously he worked as an engineer developing communication systems, mixed reality training applications, and networks for ships, helicopters, and armored vehicles.
                 </p>
                 <p>
-                    For the summer of 2024 he is participating in the Digital Stone Project in Garfagnana, Italy, and developing a project for Design Week Mexico Inédito.<br><br>&
+                    For the summer of 2024 he is participating in the Digital Stone Project in Garfagnana, Italy, and developing a project for Design Week Mexico Inédito.<br><br><span class="noblur">&</span>
                 </p>
-                <p>
+                <p class="noblur">
                     <br>
-                    <a href="/work/" id="work-link">WORK</a>
+                    <a href="/work/" id="work-link"><span class="noblur">WORK</span></a>
                     <br><br><br>
                 </p>
             </div>
@@ -351,23 +362,36 @@ button {
             <script>
                 const button = document.getElementById('toggleButton');
                 const pic = document.querySelector('.pic');
-        
+                const overlayTextElements = document.querySelectorAll('.overlay-text > p');
+
                 // Set initial z-index using JavaScript
                 pic.style.zIndex = '2';
-        
+
                 button.addEventListener('click', function() {
                     // Toggle the z-index value
                     if (pic.style.zIndex === '-2') {
-                        pic.style.zIndex = '2';
-                        button.textContent = 'READ'; // Change button text to "Read"
-                        pic.style.filter = 'none';
+                    pic.style.zIndex = '2';
+                    button.textContent = 'READ'; // Change button text to "Read"
+                    pic.style.filter = 'none';
+
+                    // Reset overlay text styles
+                    overlayTextElements.forEach(element => {
+                        element.style.color = 'transparent';
+                        element.style.textShadow = '0 0 10px rgba(0,0,0,0.5)';
+                    });
                     } else {
-                        pic.style.zIndex = '-2';
-                        button.textContent = 'LOOK'; // Change button text to "Look"
-                        pic.style.filter = 'blur(7px) opacity(40%) ';
+                    pic.style.zIndex = '-2';
+                    button.textContent = 'LOOK'; // Change button text to "Look"
+                    pic.style.filter = 'blur(7px) opacity(40%)';
+
+                    // Update overlay text styles
+                    overlayTextElements.forEach(element => {
+                        element.style.color = 'black';
+                        element.style.textShadow = 'none';
+                    });
                     }
                 });
-        
+
                 // Function to synchronize horizontal scroll with vertical scroll
                 window.addEventListener('scroll', function() {
                     const scrollPosition = window.scrollY;
