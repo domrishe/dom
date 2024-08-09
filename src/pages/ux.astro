@@ -1,5 +1,7 @@
 ---
 import EmptyLayout from '../layouts/Layout.astro';
+import '../styles/header.css';
+import '../styles/lines.css';
 
 import lp3 from '../media/Projects/lepta/lepta_3.png';
 import lp2 from '../media/Projects/lepta/lepta_2.png';
@@ -59,13 +61,14 @@ import zora from '../media/zorb.png';
         }
 
         .product-title {
-            font-family: "EB Garamond";
-            font-weight: 1000;
+            font-family: "IBM Plex Mono";
+            font-weight: 600;
             font-size: 4rem;
-            /* border: solid purple; */
             width: 80%;
             margin: auto;
             line-height: 1;
+            font-style: normal;
+            /* text-transform: uppercase; */
         }
 
         .eb-garamond-unique {
@@ -119,10 +122,12 @@ import zora from '../media/zorb.png';
 
         .and {
             font-size: 2rem;
+            padding: 100px;
         }
 
         #intro {
             font-weight: 600;
+            margin-top: 0vh;
         }
 
         .slideshow-container {
@@ -169,6 +174,15 @@ import zora from '../media/zorb.png';
             font-weight: 10;
             font-style: normal;
             font-size: 0.8rem;
+        }
+
+        .pattern-container {
+            /* display: flex;
+            flex-direction: row;
+            justify-content: center; */
+            width: 400px;
+            /* border: solid red; */
+            margin: 150px auto 120px;
         }
 
         #slideshow {
@@ -291,6 +305,11 @@ import zora from '../media/zorb.png';
 
 }
 
+#main-title {
+    margin-top: 30vh;
+    font-family: 'Fustat', sans-serif;
+}
+
 .status-text a {
   text-decoration: underline;
   color: black;
@@ -308,7 +327,7 @@ a:visited {
 			</style>
 		</head>
 		<body id="bg">
-            <a href="/">
+            <!-- <a href="/">
 			<svg viewBox="0 0 200 80" style="width:200px; height:200px; transform: scale(0.70); transform-origin: center;">
 				<rect id="clock" class="rotator" x="10" y="10" width="30" height="30" fill="black"/>
 				<rect id="counter" class="rotator" x="10" y="40" width="30" height="30" fill="black"/>
@@ -322,10 +341,26 @@ a:visited {
 				<path id="clock" class="rotator" d="M 100 40 L 70 40 A 30 30 0 0 0 100 70 Z" fill="black"/>
 				<path id="counter" class="rotator" d="M 130 40 L 130 10 A 30 30 0 0 1 160 40 Z" fill="black"/>
 				<path id="clock" class="rotator" d="M 190 40 L 160 40 A 30 30 0 0 1 190 10 Z" fill="black"/>
-			</svg></a>
+			</svg></a> -->
+
+            <header class="main-header">
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="/" class="nav-link">~DOMINIC RISHE</a></li>
+                    </ul>
+                    <ul class="nav-links-right">
+                        <li><a href="/work/" class="nav-link">WORK</a></li>
+                        <!-- Add more links here if needed -->
+                    </ul>
+                </nav>
+            </header>
             
             <div class="headline">
+                <div class="product-title" id="main-title">
+                    <p>UX / WEB / DIGITAL PRODUCT WORK</p>
+                </div>
                 <div class="blurbs" id="intro">
+
                 <p>
                     As a designer, I'm a committed generalist, and my work spans a wide breadth of media, technique, and concept. This page is a collection of projects specifically in the realm of digital product design, all done during my Master's program at RISD. For my professional experience please see my resume <a href="https://drive.google.com/file/d/1jntKY1r28zIzwDetaXiyVlXfAhZCJf2u/view?usp=share_link" target="_blank">here</a>.
                 </p>
@@ -394,7 +429,10 @@ a:visited {
 
 
 
-
+                    <div class="pattern-container" id="pattern1">
+                        <div class="lvl1"></div>
+                        <div class="lvl2"></div>
+                    </div>
 
                 <div class="description-wrap" slot="product-text">
                     <div class="product-title">
@@ -439,7 +477,10 @@ a:visited {
 
 
 
-
+                    <div class="pattern-container" id="pattern2">
+                        <div class="lvl1"></div>
+                        <div class="lvl2"></div>
+                    </div>
 
 
 
@@ -484,7 +525,10 @@ a:visited {
 
 
 
-
+                    <div class="pattern-container" id="pattern3">
+                        <div class="lvl1"></div>
+                        <div class="lvl2"></div>
+                    </div>
 
 
 
@@ -550,19 +594,54 @@ a:visited {
                     <a href="https://www.instagram.com/nouveau_rishe" target="_blank">
                         <img src={ig.src} alt="Instagram">
                     </a>
-                    <a href="https://warpcast.com/onchaindom.eth" target="_blank">
-                        <img src={fc.src} alt="Farcaster">
-                    </a>
-                    <a href="https://zora.co/@onchaindom" target="_blank">
-                        <img src={zora.src} alt="Zora">
-                    </a>
-                    <a href="https://twitter.com/nouveau_rishe" target="_blank">
-                        <img src={x.src} alt="X">
-                    </a>
+
                 </div>
             </div>
 
-			
+            <script>
+                function getRandomWidth() {
+                    return Math.floor(Math.random() * 70) + 10; // Width between 10px and 300px
+                }
+            
+                function createRandomDivs(parent) {
+                    // Clear existing divs
+                    parent.innerHTML = '';
+            
+                    // Create a random number of divs between 3 and 10
+                    const numberOfDivs = Math.floor(Math.random() * 5) + 3;
+            
+                    for (let i = 0; i < numberOfDivs; i++) {
+                        const div = document.createElement('div');
+                        div.className = 'line';
+            
+                        // Randomize width
+                        div.style.width = getRandomWidth() + 'px';
+                        
+                        // Randomize background color
+                        div.style.backgroundColor = Math.random() < 0.5 ? 'black' : 'transparent';
+            
+                        parent.appendChild(div);
+                    }
+                }
+            
+                function randomizePattern(container) {
+                    const levels = container.querySelectorAll('.lvl1, .lvl2');
+                    levels.forEach(level => {
+                        createRandomDivs(level);
+                    });
+                }
+            
+                function initializePatternGenerator(containerId) {
+                    const container = document.getElementById(containerId);
+                    randomizePattern(container);
+                    container.addEventListener('click', () => randomizePattern(container));
+                }
+            
+                // Initialize pattern generators for each container
+                initializePatternGenerator('pattern1');
+                initializePatternGenerator('pattern2');
+                initializePatternGenerator('pattern3');
+            </script>
 		</body>
 
 
