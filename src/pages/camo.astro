@@ -1,0 +1,230 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import '../styles/basic-grid.css';
+import '../styles/proj-images_camo.css';
+import '../styles/header.css';
+import '../styles/lines.css';
+
+
+import c1 from '../media/camo.jpeg';
+import c2 from '../media/Projects/camo/camo2.jpeg';
+import c3 from '../media/Projects/camo/camo3.jpg';
+import c4 from '../media/Projects/camo/camo4.jpg';
+import c5 from '../media/Projects/camo/camo5.jpeg';
+import c6 from '../media/Projects/camo/camo6.jpeg';
+import c7 from '../media/Projects/camo/camo7.jpg';
+import c8 from '../media/Projects/camo/camo8.jpeg';
+import c9 from '../media/Projects/camo/camo9.jpg';
+
+
+
+
+
+
+---
+
+<MainLayout title="work">
+
+
+  <header class="main-header">
+    <nav class="navigation">
+        <ul>
+            <li><a href="/" class="nav-link">~DOMINIC RISHE</a></li>
+        </ul>
+        <ul class="nav-links-right">
+            <li><a href="/work/" class="nav-link">WORK</a></li>
+            <!-- Add more links here if needed -->
+        </ul>
+    </nav>
+</header>
+
+
+
+  <section id="section-hero">
+    <h2>
+      <small>COTTON, STABLE DIFFUSION // FALL 2024 // RHODE ISLAND</small>
+      <!-- <span>SUMMER 2024 / GARFAGNANA, IT</span> -->
+      <strong>41.622°N, 71.484°W CAMOUFLAGE</strong>
+    </h2>
+    <div class="media-container">
+      <figure class="media">
+        <img src={c1.src} alt="fashion">
+      </figure>
+      <small></small>
+    </div>
+    <div class="pattern-container" id="pattern1">
+      <div class="lvl1"></div>
+      <div class="lvl2"></div>
+  </div>
+  </div>
+    <p class="text">
+      This project uses an AI image-making model (a latent text-to-image diffusion model) trained on a custom dataset to generate a localized and seasonal camouflage pattern. The dataset is comprised of around 400 of my own photos taken at Davis Memorial Wildlife Refuge in East Greenwich, Rhode Island. 
+    </p>
+    <p class="text">
+      The refuge is 40 acres of forest and wetland with a small trail that brushes up against the Hunt river. It’s the smallest of fourteen wildlife refuges owned by the Audubon Society of Rhode Island, making it the smallest actively conserved piece of nature in the smallest U.S. state.
+    </p>
+  </section>
+
+
+
+  <section id="section-centered">
+    <div class="media-container">
+      <figure class="media">
+        <img src={c3.src} alt="diana">
+      </figure>
+      <small></small>
+    </div>
+    <div class="media-container">
+      <figure class="media">
+        <img src={c5.src} alt="abuelo">
+      </figure>
+      <small></small>
+    </div>
+  </section>
+
+  <section class="text-container">
+    <div class="pattern-container" id="pattern2">
+      <div class="lvl1"></div>
+      <div class="lvl2"></div>
+  </div>
+    <p class="text">
+      The implications of the image-making capabilites of new AI models is hotly debated. Through this and other experiments, I’ve challenged myself to explore potential use cases for AI that are unexpected and that challenge the seemingly dominant view that these new tools are simply copyright infringement machines. 
+    </p>
+    <p class="text">
+      AI outputs are often measured by their ability to eliminate anomilies or inconsistencies - glitches - in their output images. In the case of making a camo pattern, these unwanted abstractions become functional. The glitches and repititions are exactly what’s needed to make a pattern that can serve its purpose as you move through different parts of an environment. 
+    </p>
+    <p class="text">
+      The method involves using a dataset to provide supplemental training to an already generally capable base model (in this case a Stable Diffusion model tuned for forest patterns). This flexibilty to “learn” the features of an arbitrary dataset is what allows the outputs to be local and seasonal. 
+    </p>
+    <p class="text">
+      With this exploration I hope to offer an alternate view on the use of AI for image-making - that this is a tool affording highly personalized designs that weren’t previously possible. In the larger narrative of this thesis project, I also hope to suggest that personal tools like this could facilitate a return to more local, seasonal ways of living. This camo is intended to be used for hunting and fishing, activities which demand a deep understanding of an environment, and which at their best represent a non-naive, hands-on stewardship of our natural environment. 
+    </p>
+  </section>
+
+  <section id="section-5">
+    <div class="media-container">
+      <figure class="media">
+        <img src={c4.src} alt="diana">
+      </figure>
+      <small></small>
+    </div>
+    <div class="media-container">
+      <figure class="media">
+        <img src={c7.src} alt="diana">
+      </figure>
+      <small></small>
+    </div>
+    <div class="media-container">
+      <figure class="media">
+        <img src={c9.src} alt="diana">
+      </figure>
+      <small></small>
+    </div>
+  </section>
+
+
+  <section id="section-1">
+    <div class="media-container">
+      <figure class="media">
+        <img src={c2.src} alt="tricycle">
+      </figure>
+      <small></small>
+    </div>
+    <div class="media-container">
+      <figure class="media">
+        <img src={c8.src} alt="building">
+      </figure>
+      <small></small>
+    </div>
+  </section>
+
+  <section class="text-container">
+    <div class="pattern-container" id="pattern3">
+      <div class="lvl1"></div>
+      <div class="lvl2"></div>
+  </div>
+    <p class="text">
+      The dataset was composed of ~400 images taken at Davis Memorial Wildlife Refuge in late November. This was used to train a Stable Diffusion 1.5 model using the LoRA method (Low Rank Adaptation of Large Language Models). From this trained model, many outputs were generated, testing different generation parameters and prompting techniques. Around 50% of the outputs I considered unusable, and another 40% usuable but not functional (i.e. not very effective as camouflage when overlaid on images from the original dataset). From the remaining 10% came a range of styles from abstract to naturalistic that were acceptably functional. The final pattern I chose for its naturalism and also its flexibilty - it worked well overlaid on a large percentage of the original images.
+    </p>
+
+  <section id="section-2">
+    <div class="media-container">
+      <figure class="media">
+        <img src={c6.src} alt="tote bag">
+      </figure>
+      <small></small>
+    </div>
+  </section>
+
+  <section class="text-container">
+    <p class="text">
+      I'm currently exploring additional locations, if you're interested in your own local camo pattern, please reach out here:
+    </p>
+    <a href="https://forms.gle/p3kY4ZYYmihA1X4i9" class="inquire-button"  target="_blank">Reach Out</a>
+    <span id="and"><br><br> & </span>
+  </section>
+
+
+
+
+  <script>
+    function getRandomWidth() {
+        return Math.floor(Math.random() * 70) + 10; // Width between 10px and 300px
+    }
+
+    function createRandomDivs(parent) {
+        // Clear existing divs
+        parent.innerHTML = '';
+
+        // Create a random number of divs between 3 and 10
+        const numberOfDivs = Math.floor(Math.random() * 2) + 3;
+
+        for (let i = 0; i < numberOfDivs; i++) {
+            const div = document.createElement('div');
+            div.className = 'line';
+
+            // Randomize width
+            div.style.width = getRandomWidth() + 'px';
+            
+            // Randomize background color
+            div.style.backgroundColor = Math.random() < 0.5 ? 'black' : 'transparent';
+
+            parent.appendChild(div);
+        }
+    }
+
+    function randomizePattern(container) {
+        const levels = container.querySelectorAll('.lvl1, .lvl2');
+        levels.forEach(level => {
+            createRandomDivs(level);
+        });
+    }
+
+    function initializePatternGenerator(containerId) {
+        const container = document.getElementById(containerId);
+        randomizePattern(container);
+        container.addEventListener('click', () => randomizePattern(container));
+    }
+
+    // Initialize pattern generators for each container
+    initializePatternGenerator('pattern1');
+    initializePatternGenerator('pattern2');
+    initializePatternGenerator('pattern3');
+</script>
+
+
+
+
+
+
+
+
+
+
+      
+
+
+
+
+</MainLayout>
+

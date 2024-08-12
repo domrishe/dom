@@ -1,0 +1,219 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import '../styles/basic-grid.css';
+import '../styles/proj-images_gan.css';
+import '../styles/header.css';
+import '../styles/lines.css';
+
+
+import g1 from '../media/Projects/gan/Weave_final.jpeg';
+import g2 from '../media/Projects/gan/NP161.png';
+import g3 from '../media/Projects/gan/NP140.png';
+import g4 from '../media/Projects/gan/NP138.png';
+import g5 from '../media/Projects/gan/gp_8.png';
+import g6 from '../media/Projects/gan/gp_7.jpeg';
+import g7 from '../media/Projects/gan/gp_5.jpeg';
+import g8 from '../media/Projects/gan/gp_4.jpg';
+import g9 from '../media/Projects/gan/gp_2.jpg';
+import g10 from '../media/Projects/gan/gp_1.jpg';
+import g11 from '../media/Projects/gan/out1.jpeg';
+import g12 from '../media/Projects/gan/out2.jpeg';
+import g13 from '../media/Projects/gan/grim.jpeg';
+
+
+
+
+
+
+
+---
+
+<MainLayout title="work">
+
+
+  <header class="main-header">
+    <nav class="navigation">
+        <ul>
+            <li><a href="/" class="nav-link">~DOMINIC RISHE</a></li>
+        </ul>
+        <ul class="nav-links-right">
+            <li><a href="/work/" class="nav-link">WORK</a></li>
+            <!-- Add more links here if needed -->
+        </ul>
+    </nav>
+</header>
+
+
+
+  <section id="section-hero">
+    <h2>
+      <small>GENERATIVE ADVERSARIAL NETWORKS // FALL 2022</small>
+      <!-- <span>SUMMER 2024 / GARFAGNANA, IT</span> -->
+      <strong>CUSTOM GAN / GANPAIGN CHAIR</strong>
+    </h2>
+    <div class="media-container">
+      <figure class="media">
+        <img src={g1.src} alt="fashion">
+      </figure>
+      <small></small>
+    </div>
+    <div class="pattern-container" id="pattern1">
+      <div class="lvl1"></div>
+      <div class="lvl2"></div>
+  </div>
+  </div>
+    <p class="text">
+      An exploration of the use of custom-trained AI models — in this case a Generative Adversarial Network. The dataset for this model was a set of 500+ images from Thomas Parsons's book "Designer's Guide to Scandinavian Patterns". RunwayML was then used to train a StyleGAN — and then used to generated a set of new glyph-like pattern elements. 
+    </p>
+    <p class="text">
+      These elements were curated and arranged into a pattern, then woven into uphostery fabric. The fabric was used to make a sling for a campaign-style sling chair.
+    </p>
+  </section>
+
+  <section id="section-5">
+    <div class="media-container">
+      <figure class="media">
+        <img src={g2.src} alt="diana">
+      </figure>
+      <small>Inputs from the training dataset</small>
+    </div>
+    <div class="media-container">
+      <figure class="media">
+        <img src={g3.src} alt="diana">
+      </figure>
+      <small></small>
+    </div>
+    <div class="media-container">
+      <figure class="media">
+        <img src={g4.src} alt="diana">
+      </figure>
+      <small></small>
+    </div>
+
+  </section>
+
+  <section id="section-5">
+    <div class="media-container">
+      <figure class="media">
+        <img src={g11.src} alt="diana">
+      </figure>
+      <small>Outputs from the new model</small>
+    </div>
+    <div class="media-container">
+      <figure class="media">
+        <img src={g12.src} alt="diana">
+      </figure>
+      <small></small>
+    </div>
+    <div class="media-container">
+      <figure class="media">
+        <img src={g13.src} alt="diana">
+      </figure>
+      <small></small>
+    </div>
+
+  </section>
+
+
+
+
+  <section id="section-centered">
+    <div class="media-container">
+      <figure class="media">
+        <img src={g7.src} alt="diana">
+      </figure>
+      <small></small>
+    </div>
+    <div class="media-container">
+      <figure class="media">
+        <img src={g10.src} alt="abuelo">
+      </figure>
+      <small></small>
+    </div>
+  </section>
+
+
+
+  <section id="section-1">
+    <div class="media-container">
+      <figure class="media">
+        <img src={g8.src} alt="tricycle">
+      </figure>
+      <small></small>
+    </div>
+    <div class="media-container">
+      <figure class="media">
+        <img src={g6.src} alt="building">
+      </figure>
+      <small></small>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+  <script>
+    function getRandomWidth() {
+        return Math.floor(Math.random() * 70) + 10; // Width between 10px and 300px
+    }
+
+    function createRandomDivs(parent) {
+        // Clear existing divs
+        parent.innerHTML = '';
+
+        // Create a random number of divs between 3 and 10
+        const numberOfDivs = Math.floor(Math.random() * 2) + 3;
+
+        for (let i = 0; i < numberOfDivs; i++) {
+            const div = document.createElement('div');
+            div.className = 'line';
+
+            // Randomize width
+            div.style.width = getRandomWidth() + 'px';
+            
+            // Randomize background color
+            div.style.backgroundColor = Math.random() < 0.5 ? 'black' : 'transparent';
+
+            parent.appendChild(div);
+        }
+    }
+
+    function randomizePattern(container) {
+        const levels = container.querySelectorAll('.lvl1, .lvl2');
+        levels.forEach(level => {
+            createRandomDivs(level);
+        });
+    }
+
+    function initializePatternGenerator(containerId) {
+        const container = document.getElementById(containerId);
+        randomizePattern(container);
+        container.addEventListener('click', () => randomizePattern(container));
+    }
+
+    // Initialize pattern generators for each container
+    initializePatternGenerator('pattern1');
+    initializePatternGenerator('pattern2');
+    initializePatternGenerator('pattern3');
+</script>
+
+
+
+
+
+
+
+
+
+
+      
+
+
+
+
+</MainLayout>
+

@@ -1,0 +1,217 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import '../styles/basic-grid.css';
+import '../styles/proj-images_smc.css';
+import '../styles/header.css';
+import '../styles/lines.css';
+
+
+import s1 from '../media/Projects/smc/smc1.png';
+import s2 from '../media/Projects/smc/smc2.png';
+import s3 from '../media/Projects/smc/smc3.jpeg';
+import s4 from '../media/Projects/smc/smc4.jpeg';
+import s5 from '../media/Projects/smc/smc5.jpeg';
+import s6 from '../media/Projects/smc/smc6.jpeg';
+import s7 from '../media/Projects/smc/smc7.jpeg';
+import s8 from '../media/Projects/smc/smc8.jpeg';
+import s9 from '../media/Projects/smc/smc9.jpeg';
+import s10 from '../media/Projects/smc/smc10.jpeg';
+
+
+
+
+
+
+
+---
+
+<MainLayout title="work">
+
+
+  <header class="main-header">
+    <nav class="navigation">
+        <ul>
+            <li><a href="/" class="nav-link">~DOMINIC RISHE</a></li>
+        </ul>
+        <ul class="nav-links-right">
+            <li><a href="/work/" class="nav-link">WORK</a></li>
+            <!-- Add more links here if needed -->
+        </ul>
+    </nav>
+</header>
+
+
+
+  <section id="section-hero">
+    <h2>
+      <small>WHITE OAK, INDIA INK // SPRING 2024 // RHODE ISLAND</small>
+      <!-- <span>SUMMER 2024 / GARFAGNANA, IT</span> -->
+      <strong>SWISS MOUNTAIN CHAIR</strong>
+    </h2>
+    <div class="media-container">
+      <figure class="media">
+        <img src={s3.src} alt="fashion">
+      </figure>
+      <small></small>
+    </div>
+    <div class="pattern-container" id="pattern1">
+      <div class="lvl1"></div>
+      <div class="lvl2"></div>
+  </div>
+  </div>
+    <p class="text">
+      The Swiss mountain chair, also known as the Tyrolean chair (after the Tyrol region of the Alps) or simply the “folk chair” or “back stool”, is a loose collection of vernacular forms that emerged in and around central Europe in the late Middle Ages. The base is rustic, almost pure utility. The legs are usually tapered octagons (a shape that doesn’t require a lathe), staked through the seat with wedged tenons, or through battons if the seat was too thin. The edge of the seat is often eased in a very simple fashion. In contrast, the backs are often quite ornamented, sometimes simply through their profile and sometimes through elaborate hand carving of highly symbolic imagery. The patterns and profiles cover a surprisingly wide aestetic range, and almost all are unique, even within sets that resided in a single home. This humble wedding of utility and beauty is what attracted me to these chairs as a case study, and as an opportunity to explore a new kind of generative variety. 
+    </p>
+    <p class="text">
+      My version leaves the base essentially untouched: staked octagonal legs, hand-shaped, with wedged tenons that poke through the seat. The back, however, is one output among many from an generative algorithm which produces a series of unique patterns which are carved with a CNC milling machine.
+    </p>
+  </section>
+
+
+
+  <section id="section-centered">
+    <div class="media-container">
+      <figure class="media">
+        <img src={s9.src} alt="diana">
+      </figure>
+      <small></small>
+    </div>
+    <div class="media-container">
+      <figure class="media">
+        <img src={s2.src} alt="abuelo">
+      </figure>
+      <small></small>
+    </div>
+    <div class="media-container">
+      <figure class="media">
+        <img src={s1.src} alt="abuelo">
+      </figure>
+      <small></small>
+    </div>
+  </section>
+
+  <section class="text-container">
+    <div class="pattern-container" id="pattern2">
+      <div class="lvl1"></div>
+      <div class="lvl2"></div>
+  </div>
+    <p class="text">
+      These chairs emerged at a time when Switzerland was in the middle of profound social and cultural changes. A strong artisan class was emerging and self-organizing into what would become the first Medieval trade guilds - worker organizations that have been a continuous source of inspiration from the Arts & Crafts movement to the Bauhaus, and which have been looked back on as a model for economically and socially viable craft production. This was a time when craftspeople were a real part of the economic and civic life of the city, and the fruits of their labor were the primary artifacts of culture. Contrast this with today, where craft is relegated to the extremes -- high-end studio or luxury craft on one end, hobby and DIY on the other -- while the fat middle is filled with “products” (the fruits of the industrial designer’s labor).  
+    </p>
+  </section>
+
+  <section id="section-5">
+    <div class="media-container">
+      <figure class="media">
+        <img src={s5.src} alt="diana">
+      </figure>
+      <small></small>
+    </div>
+    <div class="media-container">
+      <figure class="media">
+        <img src={s10.src} alt="diana">
+      </figure>
+      <small></small>
+    </div>
+
+  </section>
+
+  <section id="section-1">
+    <div class="media-container">
+      <figure class="media">
+        <img src={s7.src} alt="tricycle">
+      </figure>
+      <small></small>
+    </div>
+    <div class="media-container">
+      <figure class="media">
+        <img src={s4.src} alt="building">
+      </figure>
+      <small></small>
+    </div>
+  </section>
+
+  <section class="text-container">
+    <div class="pattern-container" id="pattern3">
+      <div class="lvl1"></div>
+      <div class="lvl2"></div>
+  </div>
+    <p class="text">
+      For the design of the back I wanted something that would mimic the expressive and playful shapes that are found in historical examples of these types of chairs. After a few iterations, I landed on what are called flow fields -- a technique that’s a major cliche in generative art circles, but ended up being perfect for generating smooth, playful curves with a wide aesthetic range.
+    </p>
+    <p class="text">
+      Once the pattern is generated, the lines are exported as vector graphics, and then turned into a toolpath for a CNC milling machine. The algorithm has parameters which tailor the pattern to a given standard tool diameter and profile. The pattern shown on the prototype used a 1/4” ball end mill, for example.
+    </p>
+    <p class="text">
+      The base of the chair is made in nearly the same way it would have been 600 years ago. The legs are tapered octagons - a shape that doesn’t require a lathe - which are “staked” through the seat with conical tenons. The edge of the seat is chamfered on the top edge for comfort rather than the bottom for aesthetics. 
+    </p>
+    <p class="text">
+      The prototype produced for this project was stained with black india ink, one of the oldest inks used for writing -- a nod to the fact that the design process was something rather akin to creative writing. The majority of my input as a designer was in the form of language: from the javascript that generates the patterns, to the SVG output code, and finally to the G-code that instructs the CNC machine.
+    </p>
+
+
+
+
+
+
+  <script>
+    function getRandomWidth() {
+        return Math.floor(Math.random() * 70) + 10; // Width between 10px and 300px
+    }
+
+    function createRandomDivs(parent) {
+        // Clear existing divs
+        parent.innerHTML = '';
+
+        // Create a random number of divs between 3 and 10
+        const numberOfDivs = Math.floor(Math.random() * 2) + 3;
+
+        for (let i = 0; i < numberOfDivs; i++) {
+            const div = document.createElement('div');
+            div.className = 'line';
+
+            // Randomize width
+            div.style.width = getRandomWidth() + 'px';
+            
+            // Randomize background color
+            div.style.backgroundColor = Math.random() < 0.5 ? 'black' : 'transparent';
+
+            parent.appendChild(div);
+        }
+    }
+
+    function randomizePattern(container) {
+        const levels = container.querySelectorAll('.lvl1, .lvl2');
+        levels.forEach(level => {
+            createRandomDivs(level);
+        });
+    }
+
+    function initializePatternGenerator(containerId) {
+        const container = document.getElementById(containerId);
+        randomizePattern(container);
+        container.addEventListener('click', () => randomizePattern(container));
+    }
+
+    // Initialize pattern generators for each container
+    initializePatternGenerator('pattern1');
+    initializePatternGenerator('pattern2');
+    initializePatternGenerator('pattern3');
+</script>
+
+
+
+
+
+
+
+
+
+
+      
+
+
+
+
+</MainLayout>
+

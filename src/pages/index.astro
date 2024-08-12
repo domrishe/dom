@@ -47,6 +47,7 @@ import t from '../media/table.png';
             text-decoration: underline;
             text-decoration-thickness: 1px;
             text-underline-offset: 3px;
+            z-index: 1000;
             /* color: white; */
             /* background: black; */
         }
@@ -192,7 +193,7 @@ import t from '../media/table.png';
     top: 12%;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: min-content;
     /* white-space: nowrap; Prevent line breaks */
     overflow-x: auto; /* Allow horizontal scrolling */
     display: flex;
@@ -201,13 +202,14 @@ import t from '../media/table.png';
     transition: opacity 0.5s ease;
     scrollbar-width: none; /* Hide scroll bar in Firefox */
     /* filter: blur(12px) invert(100%) opacity(30%); */
+    /* background-color:red; */
 
 }
 
 .pic img {
     object-fit: contain;
     height: 700px;
-    margin: 3rem;
+    margin-top: 3rem;
     display: inline-block;
     transition: opacity 0.5s ease;
 }
@@ -267,6 +269,7 @@ button {
             text-underline-offset: 3px; */
             color: white;
             background: black;
+            z-index: 1000;
         }
 
         @media (max-width: 768px) {
@@ -476,9 +479,13 @@ button {
     if (scrollPercentage > 0.9) {  // 90% of the page scrolled
         fixedLink.style.opacity = '0';  // Hide the link
         fixedLink.style.pointerEvents = 'none';  // Disable interactions
+        button.style.opacity = '0';  // Hide the link
+        button.style.pointerEvents = 'none';  // Disable interactions
     } else {
         fixedLink.style.opacity = '1';  // Show the link
         fixedLink.style.pointerEvents = 'auto';  // Enable interactions
+        button.style.opacity = '1';  // Hide the link
+        button.style.pointerEvents = 'auto';  // Disable interactions
     }
 });
 
