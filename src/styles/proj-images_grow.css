@@ -42,19 +42,19 @@ section {
 }
 
 #section-0 .media-container {
-  max-width: var(--width-series);
+  /* max-width: var(--width-series); */
 }
 
 #section-0 .media-container .media {
-  height: var(--height-series);
+  height: 30vw;
 }
 
 #section-0 .media-container:nth-child(1) {
-  width: 32%;
+  width: 32vw;
 }
 
 #section-0 .media-container:nth-child(2) {
-  width: 51%;
+  width: 51vw;
 }
 
 #section-0 .media-container:nth-child(3) {
