@@ -80,7 +80,6 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-weight: normal;
   margin-bottom: 50px;
   font-size: clamp(1.5rem, 6.5vw, 8rem);
   font-family: 'Bodoni Moda', serif;
@@ -93,20 +92,22 @@ section {
 #section-hero small {
   font-size: 0.175em;
   margin-bottom: 15px;
-  font-family: 'IBM Plex Mono', serif;
+  font-weight: 100;
+  text-transform: lowercase;
+  font-style: italic;
+  font-family: 'IBM Plex Mono', sans-serif;
 }
 
 #section-hero span {
   font-size: 0.2em;
   text-transform: uppercase;
   margin-bottom: 15px;
-  font-weight: 100;
   
 
 }
 #section-hero strong {
   font-family: 'IBM Plex Mono';
-  font-weight: 600;
+  font-weight: 400;
   line-height: 0.9;
   font-size: 0.7em;
   /* letter-spacing: 0.05em; */
@@ -238,7 +239,7 @@ section {
 
 @media (max-width: 767px) {
   #section-hero h2 {
-    margin-bottom: 0px;
+    margin-bottom: 30px;
     margin-top: -100px;
   }
 
@@ -251,11 +252,12 @@ section {
 
   #section-hero strong {
     font-family: 'IBM Plex Mono', sans-serif;
-    font-size: 1.5em;
-    font-weight: 600;
+    font-size: 1em;
+    font-weight: 400;
     line-height: 0.9;
     letter-spacing: -0.05em;
     text-transform: uppercase;
+
   }
 
   #section-2 img{
@@ -269,7 +271,7 @@ section {
   }
 
   #section-5 .media-container .media img {
-    max-height: 10vw;
+    /* max-height: 20vw; */
   }
 
   #section-centered .media-container:first-child {
