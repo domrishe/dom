@@ -1,0 +1,234 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import '../styles/basic-grid.css';
+import '../styles/proj-images_quilt.css';
+import '../styles/header.css';
+import '../styles/lines.css';
+
+
+import q1 from '../media/Projects/quilt/q1.jpeg';
+import q2 from '../media/Projects/quilt/q2.jpeg';
+import q3 from '../media/Projects/quilt/q3.jpeg';
+import q4 from '../media/Projects/quilt/q4.jpeg';
+import q5 from '../media/Projects/quilt/q5.jpeg';
+import q6 from '../media/Projects/quilt/q6.jpeg';
+import q7 from '../media/Projects/quilt/q7.jpeg';
+import q8 from '../media/Projects/quilt/q8.jpeg';
+import q9 from '../media/Projects/quilt/q9.jpeg';
+import q10 from '../media/Projects/quilt/q10.gif';
+import q11 from '../media/Projects/quilt/q11.jpg';
+
+
+
+
+
+
+
+
+---
+
+<MainLayout title="work">
+
+
+  <header class="main-header">
+    <nav class="navigation">
+        <ul>
+            <li><a href="/" class="nav-link">~DOMINIC RISHE</a></li>
+        </ul>
+        <ul class="nav-links-right">
+            <li><a href="/work/" class="nav-link">WORK</a></li>
+            <!-- Add more links here if needed -->
+        </ul>
+    </nav>
+</header>
+
+
+
+  <section id="section-hero">
+    <h2>
+      <small>linen, muslin, indigo, javascript // fall 2023 // RHODE ISLAND</small>
+      <!-- <span>SUMMER 2024 / GARFAGNANA, IT</span> -->
+      <strong>QUILT 165767</strong>
+    </h2>
+    <div class="media-container">
+      <figure class="media">
+        <img src={q2.src} alt="fashion">
+      </figure>
+      <small></small>
+    </div>
+    <div class="pattern-container" id="pattern1">
+      <div class="lvl1"></div>
+      <div class="lvl2"></div>
+  </div>
+  </div>
+    <p class="text">
+      This quilt is the 165,767th output of a generative algorithm based on 2D cellular automata. From across the room it also looks a lot like a pixelated version of a traditional “quilt star” pattern. It’s this similarity that caught the eye of my wife Kelly, who was my collaborator for this project and the one who chose this output from among the many as the one she’d like to dedicate significant effort to constructing.  
+    </p>
+  </section>
+
+
+
+  <section id="section-centered">
+    <div class="media-container">
+      <figure class="media">
+        <img src={q3.src} alt="diana">
+      </figure>
+      <small></small>
+    </div>
+    <div class="media-container">
+      <figure class="media">
+        <img src={q10.src} alt="abuelo">
+      </figure>
+      <small></small>
+    </div>
+  </section>
+
+  <section class="text-container">
+    <div class="pattern-container" id="pattern2">
+      <div class="lvl1"></div>
+      <div class="lvl2"></div>
+  </div>
+    <p class="text">
+      Quilts have one of richest histories of any craft object. Born of the necessity of patching scraps together, quilts and the the practice of making them are wrapped up in layers of meaning -- identity, tradition, community, locality. In some sense this project asks whether the computer has a place in all of this. 
+      <br><br>
+      My wife is a quilter; the practice connects her to other quilters in our community, to online quilt-fluencers, and to women across both of our extended families. Her eye, trained on subtle variations in quilt patterns, saw something unique in output #165767. Perhaps the craftsperson, because of the intentionality and consideration required by their practice, has something to offer to the curation process that’s required when designing with generative systems — curation that’s most often done to optimize for things like performance or function rather than meaning or tradition. 
+    </p>
+  </section>
+
+  <section id="section-centered">
+    <div class="media-container">
+      <figure class="media">
+      </figure>
+      <small></small>
+    </div>
+    <div class="media-container">
+      <figure class="media">
+        <img src={q11.src} alt="abuelo">
+      </figure>
+      <small></small>
+    </div>
+  </section>
+
+  <section class="text-container">
+    <div class="pattern-container" id="pattern4">
+      <div class="lvl1"></div>
+      <div class="lvl2"></div>
+  </div>
+    <p class="text">
+      The algorithm I chose -- a variation on John Conway’s famous Game of Life — is 54 years old, making it an antique. It’s quite clichéd; it’s kind of a “baby’s first algorithm” that’s used to teach young kids the basics of programming. The quilt pattern this output resembles — the star — is also ubiquitous in its own domain. By mixing these I hope to draw out this parallel between craft traditions and things like open-source software, which have benefited greatly because they can be used, copied, forked, and remixed without permission.
+      <br><br>
+      The quilt is made from 1,764 individual squares of either natural muslin or indigo-dyed linen, which we dyed ourselves. The linen was an old bed sheet. 
+    </p>
+  </section>
+
+  <section id="section-5">
+    <div class="media-container">
+      <figure class="media">
+        <img src={q9.src} alt="diana">
+      </figure>
+      <small></small>
+    </div>
+    <div class="media-container">
+      <figure class="media">
+        <img src={q6.src} alt="diana">
+      </figure>
+      <small></small>
+    </div>
+  </section>
+
+  <section id="section-1">
+    <div class="media-container">
+      <figure class="media">
+        <img src={q4.src} alt="tricycle">
+      </figure>
+      <small></small>
+    </div>
+    <div class="media-container">
+      <figure class="media">
+        <img src={q5.src} alt="building">
+      </figure>
+      <small></small>
+    </div>
+  </section>
+
+    <section id="section-centered">
+      <div class="media-container">
+        <figure class="media">
+        </figure>
+        <small></small>
+      </div>
+      <div class="media-container">
+        <figure class="media">
+          <img src={q1.src} alt="abuelo">
+        </figure>
+        <small></small>
+      </div>
+    </section>
+
+
+
+
+
+
+  <script>
+    function getRandomWidth() {
+        return Math.floor(Math.random() * 70) + 10; // Width between 10px and 300px
+    }
+
+    function createRandomDivs(parent) {
+        // Clear existing divs
+        parent.innerHTML = '';
+
+        // Create a random number of divs between 3 and 10
+        const numberOfDivs = Math.floor(Math.random() * 2) + 3;
+
+        for (let i = 0; i < numberOfDivs; i++) {
+            const div = document.createElement('div');
+            div.className = 'line';
+
+            // Randomize width
+            div.style.width = getRandomWidth() + 'px';
+            
+            // Randomize background color
+            div.style.backgroundColor = Math.random() < 0.5 ? 'black' : 'transparent';
+
+            parent.appendChild(div);
+        }
+    }
+
+    function randomizePattern(container) {
+        const levels = container.querySelectorAll('.lvl1, .lvl2');
+        levels.forEach(level => {
+            createRandomDivs(level);
+        });
+    }
+
+    function initializePatternGenerator(containerId) {
+        const container = document.getElementById(containerId);
+        randomizePattern(container);
+        container.addEventListener('click', () => randomizePattern(container));
+    }
+
+    // Initialize pattern generators for each container
+    initializePatternGenerator('pattern1');
+    initializePatternGenerator('pattern2');
+    initializePatternGenerator('pattern3');
+    initializePatternGenerator('pattern4');
+</script>
+
+
+
+
+
+
+
+
+
+
+      
+
+
+
+
+</MainLayout>
+

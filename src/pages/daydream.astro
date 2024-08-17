@@ -1,0 +1,213 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import '../styles/basic-grid.css';
+import '../styles/proj-images_quilt.css';
+import '../styles/header.css';
+import '../styles/lines.css';
+
+
+import d1 from '../media/dd_1.jpg';
+import d2 from '../media/Projects/daydream/dd_2.jpg';
+import d3 from '../media/Projects/daydream/dd_3.jpg';
+import d4 from '../media/Projects/daydream/dd_4.jpg';
+import d5 from '../media/Projects/daydream/dd_5.jpeg';
+import d6 from '../media/Projects/daydream/dd_6.jpeg';
+import d7 from '../media/Projects/daydream/dd_7.jpeg';
+import d8 from '../media/Projects/daydream/dd_8.jpeg';
+import d9 from '../media/Projects/daydream/dd_9.png';
+
+
+
+
+
+
+
+
+
+---
+
+<MainLayout title="work">
+
+
+  <header class="main-header">
+    <nav class="navigation">
+        <ul>
+            <li><a href="/" class="nav-link">~DOMINIC RISHE</a></li>
+        </ul>
+        <ul class="nav-links-right">
+            <li><a href="/work/" class="nav-link">WORK</a></li>
+            <!-- Add more links here if needed -->
+        </ul>
+    </nav>
+</header>
+
+
+
+  <section id="section-hero">
+    <h2>
+      <small>white oak, brass // fall 2023 // RHODE ISLAND</small>
+      <!-- <span>SUMMER 2024 / GARFAGNANA, IT</span> -->
+      <strong>DAYDREAM CHAIR</strong>
+    </h2>
+    <div class="media-container">
+      <figure class="media">
+        <img src={d1.src} alt="fashion">
+      </figure>
+      <small></small>
+    </div>
+    <div class="pattern-container" id="pattern1">
+      <div class="lvl1"></div>
+      <div class="lvl2"></div>
+  </div>
+  </div>
+    <p class="text">
+      This chair was built around the simple idea that there is a nonlinear relationship between effort and output in creative work. Daydreaming and contemplation may be as important to your work as any other activity. <br><br>
+      With this in mind I sought to build a chair that embodied a richer view of human labor as a balance between focused, active work and unfocused, creative contemplation — resulting in a dual-purpose stool/lounge chair.
+    </p>
+  </section>
+
+
+
+  <section id="section-centered">
+    <div class="media-container">
+      <figure class="media">
+        <img src={d2.src} alt="diana">
+      </figure>
+      <small></small>
+    </div>
+    <div class="media-container">
+      <figure class="media">
+        <img src={d3.src} alt="abuelo">
+      </figure>
+      <small></small>
+    </div>
+  </section>
+
+
+
+  <section id="section-centered">
+    <div class="media-container">
+      <figure class="media">
+      </figure>
+      <small></small>
+    </div>
+    <div class="media-container">
+      <figure class="media">
+        <img src={d4.src} alt="abuelo">
+      </figure>
+      <small></small>
+    </div>
+  </section>
+
+
+  <section id="section-5">
+    <div class="media-container">
+      <figure class="media">
+        <img src={d5.src} alt="diana">
+      </figure>
+      <small></small>
+    </div>
+    <div class="media-container">
+      <figure class="media">
+        <img src={d6.src} alt="diana">
+      </figure>
+      <small></small>
+    </div>
+  </section>
+
+  <section id="section-1">
+    <div class="media-container">
+      <figure class="media">
+        <img src={d7.src} alt="tricycle">
+      </figure>
+      <small></small>
+    </div>
+    <div class="media-container">
+      <figure class="media">
+        <img src={d8.src} alt="building">
+      </figure>
+      <small></small>
+    </div>
+  </section>
+
+    <section id="section-centered">
+      <div class="media-container">
+        <figure class="media">
+        </figure>
+        <small></small>
+      </div>
+      <div class="media-container">
+        <figure class="media">
+          <img src={d9.src} alt="abuelo">
+        </figure>
+        <small></small>
+      </div>
+    </section>
+
+
+
+
+
+
+  <script>
+    function getRandomWidth() {
+        return Math.floor(Math.random() * 70) + 10; // Width between 10px and 300px
+    }
+
+    function createRandomDivs(parent) {
+        // Clear existing divs
+        parent.innerHTML = '';
+
+        // Create a random number of divs between 3 and 10
+        const numberOfDivs = Math.floor(Math.random() * 2) + 3;
+
+        for (let i = 0; i < numberOfDivs; i++) {
+            const div = document.createElement('div');
+            div.className = 'line';
+
+            // Randomize width
+            div.style.width = getRandomWidth() + 'px';
+            
+            // Randomize background color
+            div.style.backgroundColor = Math.random() < 0.5 ? 'black' : 'transparent';
+
+            parent.appendChild(div);
+        }
+    }
+
+    function randomizePattern(container) {
+        const levels = container.querySelectorAll('.lvl1, .lvl2');
+        levels.forEach(level => {
+            createRandomDivs(level);
+        });
+    }
+
+    function initializePatternGenerator(containerId) {
+        const container = document.getElementById(containerId);
+        randomizePattern(container);
+        container.addEventListener('click', () => randomizePattern(container));
+    }
+
+    // Initialize pattern generators for each container
+    initializePatternGenerator('pattern1');
+    initializePatternGenerator('pattern2');
+    initializePatternGenerator('pattern3');
+    initializePatternGenerator('pattern4');
+</script>
+
+
+
+
+
+
+
+
+
+
+      
+
+
+
+
+</MainLayout>
+
