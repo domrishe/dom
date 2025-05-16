@@ -1,0 +1,507 @@
+---
+import EmptyLayout from '../layouts/Layout.astro';
+
+
+import ig from '../media/Instagram_Glyph_Black.svg';
+import li from '../media/li.svg';
+import dom from '../media/dom.png';
+
+import camo from '../media/camo.jpeg';
+import smc from '../media/smc.jpeg';
+import grow7 from '../media/Projects/grow/grow7.jpg';
+import dd from '../media/dd_1.jpg';
+import iac from '../media/iac.gif';
+import ind from '../media/in.jpeg';
+import gan from '../media/gan.gif';
+import ta from '../media/table_anim.gif';
+import dr from '../media/droste.gif';
+import lf from '../media/lf.png';
+import b from '../media/b.jpg';
+import t from '../media/table.png';
+---
+
+<EmptyLayout title="Dom">
+
+    <style>
+
+
+		
+		body {
+			background-color: #F4F0EC;
+		}
+
+        #fixedLink {
+
+
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            /* transform: translateX(-50%); */
+            padding: 10px 20px;
+            font-size: 20px;
+            font-weight: 400;
+            cursor: pointer;
+            /* background-color: inherit; */
+            border: none;
+            font-family: 'IBM Plex Mono';
+            text-decoration: underline;
+            text-decoration-thickness: 2px;
+            text-underline-offset: 3px;
+            z-index: 1000;
+            /* color: white; */
+            /* background: black; */
+        }
+
+
+        body, html {
+            margin: 0;
+            padding-top: 1rem;
+            height: 100%;
+            /* overflow: hidden; */
+        }
+
+        #name {
+            text-transform: uppercase;
+            font-style: normal;
+            font-family: 'IBM Plex Mono', sans-serif;
+            font-weight: 400;
+            font-size: 4.5rem;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            height: 100vh;
+            width: 100vw;
+            position: relative;
+            gap: 0px;
+            padding-top: 100px;
+            box-sizing: border-box;
+            margin-top: -100px;
+            overflow: hidden;
+
+        }
+
+        .grid-item {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 0;
+            padding-left: 20%;
+            padding-right: 20%;
+
+            height: calc(33.33vh - 20px);
+
+            
+        }
+        .grid-item img {
+            width: 90%;
+            height: 60%;
+            object-fit: contain;
+        }
+
+        .overlay {
+            position: relative;
+            /* z-index: 2; */
+        }
+
+        .eb-garamond-unique {
+        font-family: "EB Garamond", serif;
+        font-optical-sizing: auto;
+        font-weight: 600; 
+        font-style: normal;
+        }
+
+        .overlay-text {
+            font-family: "EB Garamond", serif;
+            font-optical-sizing: auto;
+            font-weight: 100;
+            font-style: italic;
+            font-size: 5.8rem;
+            margin: auto;
+            text-align: center;
+            line-height: 7rem;
+            /* z-index: 0; */
+
+
+        }
+
+        .overlay-text p {
+            margin: 0 10%;
+            padding: 0;
+            padding-bottom: 7rem;
+            color: transparent;
+            text-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+
+
+
+
+
+
+
+
+
+
+        .headline {
+        text-align: center;
+        font-size: 1rem;
+        margin: 77px auto;
+        max-width: 600px; 
+        color: #272520;
+
+        font-family: "EB Garamond", serif;
+        font-optical-sizing: auto;
+        font-weight: 400; 
+        font-style: italic;
+        }
+
+        .footer {
+        text-align: center;
+        font-size: 1rem;
+        margin: 50px auto;
+        max-width: 600px; 
+        color: #272520;
+
+        font-family: "EB Garamond", serif;
+        font-optical-sizing: auto;
+        font-weight: 400; 
+        font-style: italic;
+        }
+
+        .social-media {
+            padding-bottom: 50px;
+        }
+
+
+        .social-media a {
+            margin: 0 10px;
+            display: inline-block;
+        }
+
+        .social-media img {
+            width: 20px;
+            height: 20px;
+        }
+		
+		
+
+
+.pic {
+    position: fixed;
+    top: 12%;
+    left: 0;
+    width: 100%;
+    height: min-content;
+    /* white-space: nowrap; Prevent line breaks */
+    overflow-x: auto; /* Allow horizontal scrolling */
+    display: flex;
+    z-index: 2;
+    /* pointer-events: none; */
+    transition: opacity 0.5s ease;
+    scrollbar-width: none; /* Hide scroll bar in Firefox */
+    /* filter: blur(12px) invert(100%) opacity(30%); */
+    /* background-color:red; */
+
+}
+
+.pic img {
+    object-fit: contain;
+    height: 700px;
+    margin-top: 3rem;
+    margin-right: 3rem;
+    display: inline-block;
+    transition: opacity 0.5s ease;
+}
+
+
+.pic::-webkit-scrollbar {
+    width: 0; /* Hide scroll bar in Chrome, Safari, and Opera */
+    height: 0; /* Hide scroll bar height */
+}
+
+#pfp {
+    margin-left: calc(50vw - 275.431499460626px)!important;
+    margin-right: 40vw;
+}
+
+#work-link .noblur {
+    font-family: 'IBM Plex Mono', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 5px;
+    font-size: 3rem;
+    padding: 10px;
+
+}
+
+.noblur {
+    color: black;
+    text-shadow: none;
+}
+
+a {
+    color: inherit!important; /* Or your desired link color */
+}
+
+a:visited {
+    color: black!important; /* Desired visited color */
+}
+
+
+
+
+button {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            /* transform: translateX(-50%); */
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: 400;
+            cursor: pointer;
+            background-color: inherit;
+            border: none;
+            font-family: 'IBM Plex Mono';
+            /* text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 3px; */
+            color: white;
+            background: black;
+            z-index: 1000;
+        }
+
+        @media (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(5, 20%);
+        grid-template-rows: repeat(5, 20%);
+        height: 100%;
+        margin-top: -40px;
+        gap: 0px;
+        
+    }
+    .grid-item {
+        height: 50%;
+    }
+
+    .overlay-text {
+        font-size: 3rem;
+        line-height: 3.5rem;
+    }
+
+    .overlay-text p {
+        margin: 10px;
+        padding-bottom: 5rem;
+    }
+
+    #hide {
+        filter: opacity(0);
+    }
+
+
+    #name {
+            font-size: 2rem;
+        }
+
+    .pic img {
+        height: 400px;
+    }
+
+    #pfp {
+        margin-left: calc(50vw - 157.389428263215px)!important;
+    }
+
+}
+		
+			</style>
+
+
+
+
+		</head>
+		<body id="bg">
+
+
+            <button id="toggleButton">READ 📖</button>
+
+            <div class="pic" id="imageContainer">
+                <img id="pfp" src={dom.src} alt="dom1">
+                <a href="/work/">
+                    <img src={camo.src} alt="dom2">
+                </a>
+                <a href="/work/">
+                    <img src={grow7.src} alt="dom1">
+                </a>
+                <a href="/work/">
+                    <img src={iac.src} alt="dom2">
+                </a>
+                <a href="/work/">
+                    <img src={gan.src} alt="dom1">
+                </a>
+                <a href="/work/">
+                    <img src={b.src} alt="dom2">
+                </a>
+                <a href="/work/">
+                    <img src={ind.src} alt="dom1">
+                </a>
+                <a href="/work/">
+                    <img src={ta.src} alt="dom2">
+                </a>
+                <a href="/work/">
+                    <img src={lf.src} alt="dom1">
+                </a>
+                <a href="/work/">
+                    <img src={dr.src} alt="dom2">
+                </a>
+                <a href="/work/">
+                    <img src={dd.src} alt="dom1">
+                </a>
+                <a href="/work/">
+                    <img src={t.src} alt="dom1">
+                </a>
+                <a href="/work/">
+                    <img src={t.src} alt="dom1" style="visibility: hidden;">
+                </a>
+            </div>
+            
+
+            
+            <div class="overlay-text">
+                <p>
+                    <span id="name" class="noblur">&#91;Dominic Rishe&#93;</span><br> is a designer, engineer, creative technologist, and craftsperson.
+                </p>
+                <!-- <p>
+                    He's spent the last year exploring the intersections of traditional craft and emerging digital cultures as part of a Master's program at the Rhode Island School of Design. This research culminated in his thesis project 
+                    <a href="https://publications.risdmuseum.org/grad-show-2024-industrial-design/dominic-rishe" target="_blank">
+                    <span class="link">One of One of A Kind</span></a>, a collection of long-form generative objects and an accompanying series of essays on the social and cultural possibilities afforded by new digital tools like AI, blockchain, generative design, and digital fabrication. 
+                </p> -->
+                <p>
+                    His work looks for a synthesis of old and new, digital and physical, technical and meaningful, and covers a wide range of media – from furniture to NFTs, textiles to interactive AI tools, working with marble to working with DAOs. 
+                </p>
+                <p>
+                    Previously he worked as an engineer developing communication systems, mixed reality training applications, and networks for ships, helicopters, and armored vehicles.
+                </p>
+                <p>
+                    For the summer of 2024 he is participating in the Digital Stone Project in Garfagnana, Italy, and developing a project for Design Week Mexico Inédito.<br><br><span>&</span>
+                </p>
+                <p class="noblur">
+                    <br>
+                    <a href="/work/" id="work-link"><span class="noblur">WORK</span></a>
+                    <br><br><br>
+                </p>
+            </div>
+            <a href="/work/" id="fixedLink">WORK</a>
+
+
+
+            <footer class="footer">
+
+
+                <p>
+
+                </p>
+                <div class="social-media">
+                    <a href="https://drive.google.com/file/d/1jntKY1r28zIzwDetaXiyVlXfAhZCJf2u/view?usp=share_link" target="_blank">Resume/CV</a>
+                    <a href="https://www.linkedin.com/in/dominic-rishe-03501381/" target="_blank">
+                        <img src={li.src} alt="LinkedIn">
+                    </a>
+                    <a href="https://www.instagram.com/nouveau_rishe" target="_blank">
+                        <img src={ig.src} alt="Instagram">
+                    </a>
+                </div>
+            </footer>
+
+
+            <script>
+                const button = document.getElementById('toggleButton');
+                const pic = document.querySelector('.pic');
+                const overlayTextElements = document.querySelectorAll('.overlay-text > p');
+                const workLinkElement = document.getElementById('work-link').parentElement; // Get the parent <p> of the link
+
+                // Set initial z-index using JavaScript
+                pic.style.zIndex = '2';
+
+                button.addEventListener('click', function() {
+                    // Toggle the z-index value
+                    if (pic.style.zIndex === '-2') {
+                        pic.style.zIndex = '2';
+                        button.textContent = 'READ 📖'; // Change button text to "Read"
+                        pic.style.filter = 'none';
+                        pic.style.pointerEvents = 'auto';
+
+                        // Reset overlay text styles
+                        overlayTextElements.forEach(element => {
+                            if (element !== workLinkElement) { // Exclude the work link element
+                                element.style.color = 'transparent';
+                                element.style.textShadow = '0 0 10px rgba(0,0,0,0.5)';
+                            }
+                        });
+                    } else {
+                        pic.style.zIndex = '-2';
+                        button.textContent = '👀 LOOK'; // Change button text to "Look"
+                        pic.style.filter = 'blur(7px) opacity(40%)';
+
+                        // Update overlay text styles
+                        overlayTextElements.forEach(element => {
+                            if (element !== workLinkElement) { // Exclude the work link element
+                                element.style.color = 'black';
+                                element.style.textShadow = 'none';
+                            }
+                        });
+                    }
+                });
+
+
+                // Function to synchronize horizontal scroll with vertical scroll
+                window.addEventListener('scroll', function() {
+                    const scrollPosition = window.scrollY;
+                    const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+                    const scrollPercentage = scrollPosition / documentHeight;
+
+                    const container = document.getElementById('imageContainer');
+                    const containerWidth = container.scrollWidth - window.innerWidth;
+
+                    // Calculate the horizontal scroll position based on the vertical scroll percentage
+                    container.scrollLeft = containerWidth * scrollPercentage;
+                });
+
+
+
+                window.addEventListener('scroll', function() {
+    const scrollPosition = window.scrollY;
+    const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercentage = scrollPosition / documentHeight;
+
+    const fixedLink = document.getElementById('fixedLink');
+
+    // Calculate when the page is almost finished scrolling
+    if (scrollPercentage > 0.9) {  // 90% of the page scrolled
+        fixedLink.style.opacity = '0';  // Hide the link
+        fixedLink.style.pointerEvents = 'none';  // Disable interactions
+        button.style.opacity = '0';  // Hide the link
+        button.style.pointerEvents = 'none';  // Disable interactions
+    } else {
+        fixedLink.style.opacity = '1';  // Show the link
+        fixedLink.style.pointerEvents = 'auto';  // Enable interactions
+        button.style.opacity = '1';  // Hide the link
+        button.style.pointerEvents = 'auto';  // Disable interactions
+    }
+});
+
+
+
+
+            </script>
+        
+
+
+			
+		</body>
+
+
+
+</EmptyLayout>
+
